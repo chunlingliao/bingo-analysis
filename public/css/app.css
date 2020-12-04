@@ -1,0 +1,89 @@
+/* 公用主色系 */
+.text-primary {
+  color: #027eff
+}
+
+/* 第一塊 */
+.header {
+  background-color: #027eff ;
+  color: #ffffff;
+  font-size: 18px;
+  padding: 8px 0;
+}
+.bingo-wrap {
+    padding: 16px 0 10px 0;
+    border-radius: 4px;
+    background-color: #f6f9fa;
+}
+
+/* 剩餘時間 */
+.time {
+  width: 54px;
+  height: 60px;
+  border-radius: 8px;
+  box-shadow: 1px 1px 4px 0 rgba(80, 80, 80, 0.5);
+  background-color: #919aa3;
+  font-size: 36px;
+  color: #ffffff;
+  line-height: 60px ;
+}
+
+.time-sign {
+  font-size: 40px;
+  color: #919aa3;
+}
+/* 期號  */
+.number-inplay {
+  display: inline-block;
+  width: 30px;
+  height: 30px;
+  background-color: #ffb14e;
+  border-radius:50%;
+  margin-right:10px;
+  line-height: 30px;
+  color: #ffffff;
+  font-weight: 500;
+}
+
+.special-number-inplay{
+  background-color: #ff4e4e;
+}
+/* 超級獎號 */
+.Oval {
+  width: 86px;
+  height: 86px;
+  border: solid 5px #dedede;
+  border-radius:50%;
+  margin: 0 auto;
+  background-image: linear-gradient(to bottom, #ff4e4e 1%, #d70a0a);
+}
+
+.super-number {
+  line-height: 80px;
+  font-size: 44px;
+  color: #ffffff;
+}
+
+/* 獎號總和 */
+.number-total {
+  font-size: 44px ;
+}
+
+/* 預測總和 */
+.lottery-numbers-bg{
+  background-color: #ffefef;
+  padding: 14px ;
+}
+.lottery-text {
+  line-height: 30px;
+  margin-right: 16px;
+  color: #ff4e4e;
+  font-size:16px;
+}
+.lottery-numbers {
+  background-color: #ffd196;
+  color: #151515;
+}
+.special-number{
+  background-color: #ffabab;
+}
