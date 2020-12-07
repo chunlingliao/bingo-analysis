@@ -90,7 +90,7 @@
           <a class="nav-link active" id="pills-history-tab" data-toggle="pill" href="#pills-history" role="tab" aria-controls="pills-history" aria-selected="true">歷史開獎紀錄</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" id="pills-super-tab" data-toggle="pill" href="#pills-super" role="tab" aria-controls="pills-super" aria-selected="false">超級開獎號碼</a>
+          <a class="nav-link" id="pills-super-tab" data-toggle="pill" href="#pills-super" role="tab" aria-controls="pills-super" aria-selected="false">超級獎號走勢</a>
         </li>
         <li class="nav-item">
           <a class="nav-link" id="pills-hot-tab" data-toggle="pill" href="#pills-hot" role="tab" aria-controls="pills-hot" aria-selected="false">冷熱碼</a>
@@ -111,31 +111,103 @@
               </thead>
               <tbody>
                 <tr>
-                  <td>第111111111期</td>
+                  <td class="font-weight-bold period">第111111111期</td>
                   <td>
-                    <div>11 12 13 14 15 11 12 13 14 15</div>
-                    <div>11 12 13 14 15 11 12 13 14 15</div>
+                    <ul class="nav mb-1 d-flex justify-content-center">
+                      <li class="number-inplay lottery-numbers">11</li>
+                      <li class="number-inplay lottery-numbers">11</li>
+                      <li class="number-inplay lottery-numbers">11</li>
+                      <li class="number-inplay lottery-numbers">11</li>
+                      <li class="number-inplay lottery-numbers">11</li>
+                      <li class="number-inplay lottery-numbers">11</li>
+                      <li class="number-inplay lottery-numbers special-number-inplay">11</li>
+                      <li class="number-inplay lottery-numbers">11</li>
+                      <li class="number-inplay lottery-numbers">11</li>
+                      <li class="number-inplay lottery-numbers">11</li>
+                    </ul>
+                    <ul class="nav d-flex justify-content-center">
+                      <li class="number-inplay lottery-numbers">11</li>
+                      <li class="number-inplay lottery-numbers">11</li>
+                      <li class="number-inplay lottery-numbers">11</li>
+                      <li class="number-inplay lottery-numbers">11</li>
+                      <li class="number-inplay lottery-numbers">11</li>
+                      <li class="number-inplay lottery-numbers">11</li>
+                      <li class="number-inplay lottery-numbers">11</li>
+                      <li class="number-inplay lottery-numbers">11</li>
+                      <li class="number-inplay lottery-numbers">11</li>
+                      <li class="number-inplay lottery-numbers">11</li>
+                    </ul>
                   </td>
-                  <td>45</td>
-                  <td>118</td>
+                  <td>
+                    <div class="history-special-number">45</div>
+                  </td>
+                  <td><div class="history-number-total">118</div></td>
                 </tr>
                 <tr>
-                  <td>第222222222期</td>
+                  <td class="font-weight-bold period">第222222222期</td>
                   <td>
-                    <div>11 12 13 14 15 11 12 13 14 15</div>
-                    <div>11 12 13 14 15 11 12 13 14 15</div>
+                    <ul class="nav mb-1 d-flex justify-content-center">
+                      <li class="number-inplay lottery-numbers">11</li>
+                      <li class="number-inplay lottery-numbers">11</li>
+                      <li class="number-inplay lottery-numbers">11</li>
+                      <li class="number-inplay lottery-numbers">11</li>
+                      <li class="number-inplay lottery-numbers">11</li>
+                      <li class="number-inplay lottery-numbers">11</li>
+                      <li class="number-inplay lottery-numbers special-number-inplay">11</li>
+                      <li class="number-inplay lottery-numbers">11</li>
+                      <li class="number-inplay lottery-numbers">11</li>
+                      <li class="number-inplay lottery-numbers">11</li>
+                    </ul>
+                    <ul class="nav d-flex justify-content-center">
+                      <li class="number-inplay lottery-numbers">11</li>
+                      <li class="number-inplay lottery-numbers">11</li>
+                      <li class="number-inplay lottery-numbers">11</li>
+                      <li class="number-inplay lottery-numbers">11</li>
+                      <li class="number-inplay lottery-numbers">11</li>
+                      <li class="number-inplay lottery-numbers">11</li>
+                      <li class="number-inplay lottery-numbers">11</li>
+                      <li class="number-inplay lottery-numbers">11</li>
+                      <li class="number-inplay lottery-numbers">11</li>
+                      <li class="number-inplay lottery-numbers">11</li>
+                    </ul>
                   </td>
-                  <td>45</td>
-                  <td>118</td>
+                  <td>
+                    <div class="history-special-number">45</div>
+                  </td>
+                  <td><div class="history-number-total">118</div></td>
                 </tr>
                 <tr>
-                  <td>第333333333期</td>
+                  <td class="font-weight-bold period">第333333333期</td>
                   <td>
-                    <div>11 12 13 14 15 11 12 13 14 15</div>
-                    <div>11 12 13 14 15 11 12 13 14 15</div>
+                    <ul class="nav mb-1 d-flex justify-content-center">
+                      <li class="number-inplay lottery-numbers">11</li>
+                      <li class="number-inplay lottery-numbers">11</li>
+                      <li class="number-inplay lottery-numbers">11</li>
+                      <li class="number-inplay lottery-numbers">11</li>
+                      <li class="number-inplay lottery-numbers">11</li>
+                      <li class="number-inplay lottery-numbers">11</li>
+                      <li class="number-inplay lottery-numbers special-number-inplay">11</li>
+                      <li class="number-inplay lottery-numbers">11</li>
+                      <li class="number-inplay lottery-numbers">11</li>
+                      <li class="number-inplay lottery-numbers">11</li>
+                    </ul>
+                    <ul class="nav d-flex justify-content-center">
+                      <li class="number-inplay lottery-numbers">11</li>
+                      <li class="number-inplay lottery-numbers">11</li>
+                      <li class="number-inplay lottery-numbers">11</li>
+                      <li class="number-inplay lottery-numbers">11</li>
+                      <li class="number-inplay lottery-numbers">11</li>
+                      <li class="number-inplay lottery-numbers">11</li>
+                      <li class="number-inplay lottery-numbers">11</li>
+                      <li class="number-inplay lottery-numbers">11</li>
+                      <li class="number-inplay lottery-numbers">11</li>
+                      <li class="number-inplay lottery-numbers">11</li>
+                    </ul>
                   </td>
-                  <td>45</td>
-                  <td>118</td>
+                  <td>
+                    <div class="history-special-number">45</div>
+                  </td>
+                  <td><div class="history-number-total">118</div></td>
                 </tr>
               </tbody>
             </table>
@@ -144,7 +216,11 @@
 
         <!-- 超級開獎號碼 -->
         <div class="tab-pane fade" id="pills-super" role="tabpanel" aria-labelledby="pills-super-tab">
-
+          <div class="super-tab-bg">
+            <div style="height:350px">
+              走勢圖在這！
+            </div>
+          </div>
         </div>
         <!-- 冷熱碼 -->
         <div class="tab-pane fade" id="pills-hot" role="tabpanel" aria-labelledby="pills-hot-tab">

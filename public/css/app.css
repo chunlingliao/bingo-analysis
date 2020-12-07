@@ -11,9 +11,22 @@
   padding: 8px 0;
 }
 .bingo-wrap {
-    padding: 16px 0 10px 0;
-    border-radius: 4px;
-    background-color: #f6f9fa;
+  padding: 16px 0 10px 0;
+  border-radius: 4px;
+  background-color: #f6f9fa;
+}
+
+/* 導覽列 */
+.nav-pills .nav-link {
+  border-radius: 20px;
+  background-color: #f0f4f7;
+  color: #919aa3;
+  margin-right: 10px;
+  
+}
+.nav-pills .nav-link.active {
+  background-color: #e1efff;
+  color: #54a0e5;
 }
 
 /* 剩餘時間 */
@@ -53,7 +66,7 @@
   width: 86px;
   height: 86px;
   border: solid 5px #dedede;
-  border-radius:50%;
+  border-radius: 50%;
   margin: 0 auto;
   background-image: linear-gradient(to bottom, #ff4e4e 1%, #d70a0a);
 }
@@ -86,4 +99,63 @@
 }
 .special-number{
   background-color: #ffabab;
+}
+
+/* 歷史開獎紀錄 */
+.table{
+  border: 1px solid #ebeef1;
+}
+
+.table thead th {
+  background-color: #f1f3f6;
+  border-bottom: 1px solid #ebeef1;
+  color: #919aa3;
+  font-size: 16px;
+  font-weight: 500;
+}
+
+.table td, .table th {
+  border-top: 1px solid #ebeef1;
+}
+
+.table-striped tbody tr:nth-of-type(odd){
+  background-color: #ffffff;
+}
+
+.table-striped tbody tr:nth-of-type(even){
+  background-color: #fbfcfc;
+}
+
+.table-striped td {
+  vertical-align: middle;
+  text-align: center;
+}
+
+.period {
+  font-size: 16px;
+  font-weight: 600;
+  color: #404c56;
+}
+
+.history-special-number {
+  width: 56px;
+  height: 56px;
+  border: solid 3px #dedede;
+  border-radius: 50%;
+  margin: 0 auto ;
+  background-color: #ffabab;
+  line-height: 52px;
+  font-size: 26px;
+  color: #151515;
+}
+.history-number-total{
+  font-size: 30px;
+  font-weight: 500;
+  color: #027eff;
+}
+
+/* 超級獎號走勢 */
+
+.super-tab-bg {
+  background-color: #f6f9fa;
 }
