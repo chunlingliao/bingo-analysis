@@ -2,7 +2,7 @@
 <div>
   <div class="text-left header">
     <div class="container">賓果賓果輔助系統</div>
-    </div>
+  </div>
   <div class="container">
     <div class="text-left text-primary mt-3 mb-3">賓果賓果</div>
     <!-- 第一塊 -->
@@ -224,7 +224,18 @@
         </div>
         <!-- 冷熱碼 -->
         <div class="tab-pane fade" id="pills-hot" role="tabpanel" aria-labelledby="pills-hot-tab">
-
+          <div class="table-responsive-md">
+            <table class="table table-striped">
+              <tbody>
+                <tr v-for="(item , i) in hotNumber" :key="i">
+                  <td v-for="(number, j) in item" :key="j">
+                    <div class="number-inplay lottery-numbers float-left">{{ number.ball }}</div>
+                    <div class="ball-type">{{ number.type }}次</div>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
         </div>
       </div>
     </div>
@@ -233,7 +244,81 @@
 </template>
 
 <script>
-
+export default {
+  name: "",
+  props: {},
+  data: function() {
+    // 資料
+    return {
+      hotNumber:[
+        [{ ball:'01', type:'10'},{ ball:'01', type:'10'},{ ball:'01', type:'10'},
+        { ball:'01', type:'10'},{ ball:'01', type:'10'},{ ball:'01', type:'10'},
+        { ball:'01', type:'10'},{ ball:'01', type:'10'},{ ball:'01', type:'10'},{ ball:'01', type:'10'}],
+        [{ ball:'02', type:'20'},{ ball:'01', type:'10'},{ ball:'01', type:'10'},
+        { ball:'01', type:'10'},{ ball:'01', type:'10'},{ ball:'01', type:'10'},
+        { ball:'01', type:'10'},{ ball:'01', type:'10'},{ ball:'01', type:'10'},{ ball:'01', type:'10'}],
+        [{ ball:'03', type:'30'},{ ball:'01', type:'10'},{ ball:'01', type:'10'},
+        { ball:'01', type:'10'},{ ball:'01', type:'10'},{ ball:'01', type:'10'},
+        { ball:'01', type:'10'},{ ball:'01', type:'10'},{ ball:'01', type:'10'},{ ball:'01', type:'10'}],
+        [{ ball:'04', type:'40'},{ ball:'01', type:'10'},{ ball:'01', type:'10'},
+        { ball:'01', type:'10'},{ ball:'01', type:'10'},{ ball:'01', type:'10'},
+        { ball:'01', type:'10'},{ ball:'01', type:'10'},{ ball:'01', type:'10'},{ ball:'01', type:'10'}],
+        [{ ball:'05', type:'50'},{ ball:'01', type:'10'},{ ball:'01', type:'10'},
+        { ball:'01', type:'10'},{ ball:'01', type:'10'},{ ball:'01', type:'10'},
+        { ball:'01', type:'10'},{ ball:'01', type:'10'},{ ball:'01', type:'10'},{ ball:'01', type:'10'}],
+        [{ ball:'06', type:'60'},{ ball:'01', type:'10'},{ ball:'01', type:'10'},
+        { ball:'01', type:'10'},{ ball:'01', type:'10'},{ ball:'01', type:'10'},
+        { ball:'01', type:'10'},{ ball:'01', type:'10'},{ ball:'01', type:'10'},{ ball:'01', type:'10'}],
+        [{ ball:'07', type:'20'},{ ball:'01', type:'10'},{ ball:'01', type:'10'},
+        { ball:'01', type:'10'},{ ball:'01', type:'10'},{ ball:'01', type:'10'},
+        { ball:'01', type:'10'},{ ball:'01', type:'10'},{ ball:'01', type:'10'},{ ball:'01', type:'10'}],
+        [{ ball:'08', type:'20'},{ ball:'01', type:'10'},{ ball:'01', type:'10'},
+        { ball:'01', type:'10'},{ ball:'01', type:'10'},{ ball:'01', type:'10'},
+        { ball:'01', type:'10'},{ ball:'01', type:'10'},{ ball:'01', type:'10'},{ ball:'01', type:'10'}]
+      ]
+    };
+  },
+  components: {
+    // f2ecommonMask //1.個別引入
+  },
+  watch: {
+    //監聽值
+  },
+  computed: {
+    //相依的資料改變時才做計算方法
+  },
+  methods: {
+    // 初始
+  },
+  //BEGIN--生命週期
+  beforeCreate: function() {
+    //實體初始化
+  },
+  created: function() {
+    //實體建立完成。資料 $data 已可取得，但 $el 屬性還未被建立。
+    this.src = this.$options.__file ;
+  },
+  beforeMount: function() {
+    //執行元素掛載之前。
+  },
+  mounted: function() {
+    //元素已掛載， $el 被建立。
+    console.log(window.customElements)
+  },
+  beforeUpdate: function() {
+    //當資料變化時被呼叫，還不會描繪 View。
+  },
+  updated: function() {
+    //當資料變化時被呼叫，還不會描繪 View。
+  },
+  beforeDestroy: function() {
+    //實體還可使用。
+  },
+  destroyed: function() {
+    //實體銷毀。
+  }
+  //END--生命週期
+};
 </script>
 
 <style>
