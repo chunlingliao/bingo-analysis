@@ -1,5 +1,5 @@
 <template>
-  <div class="">
+  <div class="tinyBingo">
     <header>
       <nav class="navbar navbar-primary bg-primary text-white">
         <div class="container">
@@ -131,8 +131,8 @@
               </thead>
               <tbody>
                 <tr>
-                  <td>第000000001期</td>
-                  <td>
+                  <td class="align-middle">第000000001期</td>
+                  <td class="align-middle">
                     <div class="ball">
                       <div class="blackNumber">01</div>
                       <div class="blackNumber">02</div>
@@ -156,20 +156,20 @@
                       <div class="blackNumber">20</div>
                     </div>
                   </td>
-                  <td>
+                  <td class="align-middle">
                     <div class="superBall">
                       03
                     </div>
                   </td>
-                  <td>
+                  <td class="align-middle">
                     <div class="totalBall">
                       210
                     </div>
                   </td>
                 </tr>
                 <tr>
-                  <td>第000000002期</td>
-                  <td>
+                  <td class="align-middle">第000000002期</td>
+                  <td class="align-middle">
                     <div class="ball">
                       <div class="blackNumber">01</div>
                       <div class="blackNumber">02</div>
@@ -193,20 +193,20 @@
                       <div class="blackNumber">20</div>
                     </div>
                   </td>
-                  <td>
+                  <td class="align-middle">
                     <div class="superBall">
                       05
                     </div>
                   </td>
-                  <td>
+                  <td class="align-middle">
                     <div class="totalBall">
                       210
                     </div>
                   </td>
                 </tr>
                 <tr>
-                  <td>第000000003期</td>
-                  <td>
+                  <td class="align-middle">第000000003期</td>
+                  <td class="align-middle">
                     <div class="ball">
                       <div class="blackNumber">01</div>
                       <div class="blackNumber">02</div>
@@ -230,20 +230,20 @@
                       <div class="blackNumber">20</div>
                     </div>
                   </td>
-                  <td>
+                  <td class="align-middle">
                     <div class="superBall">
                       17
                     </div>
                   </td>
-                  <td>
+                  <td class="align-middle">
                     <div class="totalBall">
                       210
                     </div>
                   </td>
                 </tr>
                 <tr>
-                  <td>第000000004期</td>
-                  <td>
+                  <td class="align-middle">第000000004期</td>
+                  <td class="align-middle">
                     <div class="ball">
                       <div class="blackNumber">01</div>
                       <div class="blackNumber">02</div>
@@ -267,12 +267,12 @@
                       <div class="blackNumber superNumber">20</div>
                     </div>
                   </td>
-                  <td>
+                  <td class="align-middle">
                     <div class="superBall">
                       20
                     </div>
                   </td>
-                  <td>
+                  <td class="align-middle">
                     <div class="totalBall">
                       210
                     </div>
@@ -434,40 +434,111 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-/* 當前資訊區 */
-.currentInfo {
-  padding: 20px;
-  border-radius: 4px;
-  background-color: #f6f9fa;
-  p {
-    color: #212736;
-    font-weight: bold;
+.tinyBingo {
+  /* 當前資訊區 */
+  .currentInfo {
+    padding: 20px;
+    border-radius: 4px;
+    background-color: #f6f9fa;
+    p {
+      color: #212736;
+      font-weight: bold;
+    }
+
+    // 倒數器
+    .countdown {
+      .timeMinutes,
+      .timeSeconds {
+        float: left;
+        width: 54px;
+        height: 60px;
+        border-radius: 8px;
+        box-shadow: 1px 1px 4px 0 rgba(80, 80, 80, 0.5);
+        background-color: #919aa3;
+        padding: 5px;
+        font-family: Arial;
+        font-size: 36px;
+        color: #ffffff;
+      }
+      .timeColon {
+        font-size: 36px;
+        padding: 0px 4px 0px 4px;
+        color: #919aa3;
+      }
+    }
+    // 當期球號
+    .currentNumber {
+      // 球號
+      // .ball div {
+      //   float: left;
+      //   width: 28px;
+      //   height: 28px;
+      //   color: #fff;
+      //   margin: 0px 5px 5px 0px;
+      //   border-radius: 50%;
+      //   background-color: #ffb14e;
+      //   line-height: 28px;
+      //   text-align: center;
+      // }
+    }
+    // 超級獎號
+    .superBall {
+      width: 80px;
+      height: 80px;
+      padding: 8px;
+      border: solid 4px #dedede;
+      border-radius: 50%;
+      background-image: linear-gradient(to bottom, #ff4e4e 1%, #d70a0a);
+      color: #fff;
+      font-size: 38px;
+    }
+    // 獎號總和
+    .totalBall {
+      padding: 10px;
+      font-family: Arial;
+      font-size: 40px;
+      color: #029fff;
+    }
   }
 
-  // 倒數器
-  .countdown {
-    .timeMinutes,
-    .timeSeconds {
-      float: left;
-      width: 54px;
-      height: 60px;
-      border-radius: 8px;
-      box-shadow: 1px 1px 4px 0 rgba(80, 80, 80, 0.5);
-      background-color: #919aa3;
-      padding: 5px;
-      font-family: Arial;
-      font-size: 36px;
-      color: #ffffff;
+  /* 預測資訊區 */
+  .predictionInfo {
+    padding: 10px;
+    border-radius: 4px;
+    background-color: #ffefef;
+    .predictionNumber {
+      color: #ff4e4e;
     }
-    .timeColon {
-      font-size: 36px;
-      padding: 0px 4px 0px 4px;
+    // 球號
+    // .ball div {
+    //   float: left;
+    //   width: 28px;
+    //   height: 28px;
+    //   color: #fff;
+    //   margin: 0px 2px;
+    //   border-radius: 50%;
+    //   background-color: #ffb14e;
+    //   line-height: 28px;
+    //   text-align: center;
+    // }
+  }
+
+  /* 分頁分析區 */
+  .nav-pills .nav-link.active {
+    border-radius: 20px;
+    color: #54a0e5;
+    background-color: #e1efff;
+  }
+  .nav-item {
+    border-radius: 20px;
+    color: #919aa3;
+    background-color: #f0f4f7;
+    a {
       color: #919aa3;
     }
   }
-  // 當期球號
-  .currentNumber {
-    // 球號
+  .tableList {
+    // 開獎號碼
     // .ball div {
     //   float: left;
     //   width: 28px;
@@ -479,124 +550,55 @@ export default {
     //   line-height: 28px;
     //   text-align: center;
     // }
+    // 超級獎號
+    .superBall {
+      width: 50px;
+      height: 50px;
+      padding: 8px;
+      border: solid 3px #dedede;
+      border-radius: 50%;
+      background-color: #ffabab;
+      color: #151515;
+      font-size: 20px;
+    }
+    // 獎號總和
+    .totalBall {
+      padding: 10px;
+      font-family: Arial;
+      font-size: 20px;
+      color: #027eff;
+    }
   }
-  // 超級獎號
-  .superBall {
-    width: 80px;
-    height: 80px;
-    padding: 8px;
-    border: solid 4px #dedede;
-    border-radius: 50%;
-    background-image: linear-gradient(to bottom, #ff4e4e 1%, #d70a0a);
-    color: #fff;
-    font-size: 38px;
-  }
-  // 獎號總和
-  .totalBall {
-    padding: 10px;
-    font-family: Arial;
-    font-size: 40px;
-    color: #029fff;
-  }
-}
 
-/* 預測資訊區 */
-.predictionInfo {
-  padding: 10px;
-  border-radius: 4px;
-  background-color: #ffefef;
-  .predictionNumber {
-    color: #ff4e4e;
-  }
   // 球號
-  // .ball div {
-  //   float: left;
-  //   width: 28px;
-  //   height: 28px;
-  //   color: #fff;
-  //   margin: 0px 2px;
-  //   border-radius: 50%;
-  //   background-color: #ffb14e;
-  //   line-height: 28px;
-  //   text-align: center;
-  // }
-}
-
-/* 分頁分析區 */
-.nav-pills .nav-link.active {
-  border-radius: 20px;
-  color: #54a0e5;
-  background-color: #e1efff;
-}
-.nav-item {
-  border-radius: 20px;
-  color: #919aa3;
-  background-color: #f0f4f7;
-  a {
-    color: #919aa3;
-  }
-}
-.tableList {
-  // 開獎號碼
-  // .ball div {
-  //   float: left;
-  //   width: 28px;
-  //   height: 28px;
-  //   color: #fff;
-  //   margin: 0px 5px 5px 0px;
-  //   border-radius: 50%;
-  //   background-color: #ffb14e;
-  //   line-height: 28px;
-  //   text-align: center;
-  // }
-  // 超級獎號
-  .superBall {
-    width: 50px;
-    height: 50px;
-    padding: 8px;
-    border: solid 3px #dedede;
-    border-radius: 50%;
-    background-color: #ffabab;
-    color: #151515;
-    font-size: 20px;
-  }
-  // 獎號總和
-  .totalBall {
-    padding: 10px;
-    font-family: Arial;
-    font-size: 20px;
-    color: #027eff;
-  }
-}
-
-// 球號
-.ball {
-  div {
-    float: left;
-    width: 28px;
-    height: 28px;
-    margin: 0px 5px 5px 0px;
-    border-radius: 50%;
-    line-height: 28px;
-    text-align: center;
-  }
-  // 白色文字球號
-  .whiteNumber {
-    color: #fff;
-    background-color: #ffb14e;
-  }
-  // 白色文字超級獎號
-  .whiteNumber.superNumber {
-    background-color: #ff4e4e;
-  }
-  // 黑色文字球號
-  .blackNumber {
-    color: #151515;
-    background-color: #ffd196;
-  }
-  // 黑色文字超級獎號
-  .blackNumber.superNumber {
-    background-color: #ffabab;
+  .ball {
+    div {
+      float: left;
+      width: 28px;
+      height: 28px;
+      margin: 0px 5px 5px 0px;
+      border-radius: 50%;
+      line-height: 1.9;
+      text-align: center;
+    }
+    // 白色文字球號
+    .whiteNumber {
+      color: #fff;
+      background-color: #ffb14e;
+    }
+    // 白色文字超級獎號
+    .whiteNumber.superNumber {
+      background-color: #ff4e4e;
+    }
+    // 黑色文字球號
+    .blackNumber {
+      color: #151515;
+      background-color: #ffd196;
+    }
+    // 黑色文字超級獎號
+    .blackNumber.superNumber {
+      background-color: #ffabab;
+    }
   }
 }
 </style>
