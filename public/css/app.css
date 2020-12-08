@@ -165,4 +165,37 @@
 
 .ball-type{
   line-height: 30px;
+  font-weight: 500;
+}
+
+/* gototop */
+.toTop span {
+  position: fixed;
+  bottom: 70px;
+  right: 24px;
+  opacity: .9;
+  height: 50px;
+  width: 50px;
+  border-radius: 50%;
+  text-align: center;
+  background: #54a0e5;
+  box-shadow: 1px 1px 4px 0 rgb(2, 46, 93);
+  line-height: 45px;
+  z-index: 9
+}
+
+.toTop span:hover {
+  background: #057eff
+}
+
+.toTop span::before {
+  content: "";
+  position: absolute;
+  left: calc(50% - 7.5px);
+  top: calc(50% - 14px);
+  width: 0;
+  height: 15px;
+  border: 7px solid transparent;
+  border-top: 10px solid #f6f6f6;
+  transform: rotate(180deg)
 }
