@@ -70,7 +70,7 @@
             <div class="col-md-2 col-sm-6">
               <p>獎號總和</p>
               <div class="d-flex justify-content-center text-center">
-                <div class="totalBall">
+                <div class="totalBall text-primary">
                   210
                 </div>
               </div>
@@ -130,10 +130,10 @@
                 </tr>
               </thead>
               <tbody>
-                <tr>
-                  <td class="align-middle">第000000001期</td>
+                <tr v-for="(items, i) in historyList" :key="i">
+                  <td class="align-middle">第{{ items.number }}期</td>
                   <td class="align-middle">
-                    <div class="ball">
+                    <!-- <div class="ball">
                       <div class="blackNumber">01</div>
                       <div class="blackNumber">02</div>
                       <div class="blackNumber superNumber">03</div>
@@ -154,127 +154,19 @@
                       <div class="blackNumber">18</div>
                       <div class="blackNumber">19</div>
                       <div class="blackNumber">20</div>
-                    </div>
-                  </td>
-                  <td class="align-middle">
-                    <div class="superBall">
-                      03
-                    </div>
-                  </td>
-                  <td class="align-middle">
-                    <div class="totalBall">
-                      210
-                    </div>
-                  </td>
-                </tr>
-                <tr>
-                  <td class="align-middle">第000000002期</td>
-                  <td class="align-middle">
+                    </div> -->
                     <div class="ball">
-                      <div class="blackNumber">01</div>
-                      <div class="blackNumber">02</div>
-                      <div class="blackNumber">03</div>
-                      <div class="blackNumber">04</div>
-                      <div class="blackNumber superNumber">05</div>
-                      <div class="blackNumber">06</div>
-                      <div class="blackNumber">07</div>
-                      <div class="blackNumber">08</div>
-                      <div class="blackNumber">09</div>
-                      <div class="blackNumber">10</div>
-                      <div class="blackNumber">11</div>
-                      <div class="blackNumber">12</div>
-                      <div class="blackNumber">13</div>
-                      <div class="blackNumber">14</div>
-                      <div class="blackNumber">15</div>
-                      <div class="blackNumber">16</div>
-                      <div class="blackNumber">17</div>
-                      <div class="blackNumber">18</div>
-                      <div class="blackNumber">19</div>
-                      <div class="blackNumber">20</div>
+                      <div :class="['blackNumber', {'superNumber': ball === items.superBall}]" v-for="ball in items.balls.split(',')">{{ ball }}</div>
                     </div>
                   </td>
                   <td class="align-middle">
                     <div class="superBall">
-                      05
+                      {{ items.superBall }}
                     </div>
                   </td>
                   <td class="align-middle">
-                    <div class="totalBall">
-                      210
-                    </div>
-                  </td>
-                </tr>
-                <tr>
-                  <td class="align-middle">第000000003期</td>
-                  <td class="align-middle">
-                    <div class="ball">
-                      <div class="blackNumber">01</div>
-                      <div class="blackNumber">02</div>
-                      <div class="blackNumber">03</div>
-                      <div class="blackNumber">04</div>
-                      <div class="blackNumber">05</div>
-                      <div class="blackNumber">06</div>
-                      <div class="blackNumber">07</div>
-                      <div class="blackNumber">08</div>
-                      <div class="blackNumber">09</div>
-                      <div class="blackNumber">10</div>
-                      <div class="blackNumber">11</div>
-                      <div class="blackNumber">12</div>
-                      <div class="blackNumber">13</div>
-                      <div class="blackNumber">14</div>
-                      <div class="blackNumber">15</div>
-                      <div class="blackNumber">16</div>
-                      <div class="blackNumber superNumber">17</div>
-                      <div class="blackNumber">18</div>
-                      <div class="blackNumber">19</div>
-                      <div class="blackNumber">20</div>
-                    </div>
-                  </td>
-                  <td class="align-middle">
-                    <div class="superBall">
-                      17
-                    </div>
-                  </td>
-                  <td class="align-middle">
-                    <div class="totalBall">
-                      210
-                    </div>
-                  </td>
-                </tr>
-                <tr>
-                  <td class="align-middle">第000000004期</td>
-                  <td class="align-middle">
-                    <div class="ball">
-                      <div class="blackNumber">01</div>
-                      <div class="blackNumber">02</div>
-                      <div class="blackNumber">03</div>
-                      <div class="blackNumber">04</div>
-                      <div class="blackNumber">05</div>
-                      <div class="blackNumber">06</div>
-                      <div class="blackNumber">07</div>
-                      <div class="blackNumber">08</div>
-                      <div class="blackNumber">09</div>
-                      <div class="blackNumber">10</div>
-                      <div class="blackNumber">11</div>
-                      <div class="blackNumber">12</div>
-                      <div class="blackNumber">13</div>
-                      <div class="blackNumber">14</div>
-                      <div class="blackNumber">15</div>
-                      <div class="blackNumber">16</div>
-                      <div class="blackNumber">17</div>
-                      <div class="blackNumber">18</div>
-                      <div class="blackNumber">19</div>
-                      <div class="blackNumber superNumber">20</div>
-                    </div>
-                  </td>
-                  <td class="align-middle">
-                    <div class="superBall">
-                      20
-                    </div>
-                  </td>
-                  <td class="align-middle">
-                    <div class="totalBall">
-                      210
+                    <div class="totalBall text-primary">
+                      {{ items.totalBalls }}
                     </div>
                   </td>
                 </tr>
@@ -291,130 +183,10 @@
           <div class="tab-pane fade" id="pills-contact" role="tabpanel" aria-labelledby="pills-tab3">
             <table class="table table-striped tableList">
               <tbody>
-                <tr>
-                  <td>
-                    <div class="ball"><div class="blackNumber">01</div></div>
-                    <div class="">37次</div>
-                  </td>
-                  <td>
-                    <div class="ball"><div class="blackNumber">02</div></div>
-                    <div class="">37次</div>
-                  </td>
-                  <td>
-                    <div class="ball"><div class="blackNumber">03</div></div>
-                    <div class="">37次</div>
-                  </td>
-                  <td>
-                    <div class="ball"><div class="blackNumber">04</div></div>
-                    <div class="">37次</div>
-                  </td>
-                  <td>
-                    <div class="ball"><div class="blackNumber">05</div></div>
-                    <div class="">37次</div>
-                  </td>
-                  <td>
-                    <div class="ball"><div class="blackNumber">06</div></div>
-                    <div class="">37次</div>
-                  </td>
-                  <td>
-                    <div class="ball"><div class="blackNumber">07</div></div>
-                    <div class="">37次</div>
-                  </td>
-                  <td>
-                    <div class="ball"><div class="blackNumber">08</div></div>
-                    <div class="">37次</div>
-                  </td>
-                  <td>
-                    <div class="ball"><div class="blackNumber">09</div></div>
-                    <div class="">37次</div>
-                  </td>
-                  <td>
-                    <div class="ball"><div class="blackNumber">10</div></div>
-                    <div class="">37次</div>
-                  </td>
-                </tr>
-                <tr>
-                  <td>
-                    <div class="ball"><div class="blackNumber">11</div></div>
-                    <div class="">37次</div>
-                  </td>
-                  <td>
-                    <div class="ball"><div class="blackNumber">12</div></div>
-                    <div class="">37次</div>
-                  </td>
-                  <td>
-                    <div class="ball"><div class="blackNumber">13</div></div>
-                    <div class="">37次</div>
-                  </td>
-                  <td>
-                    <div class="ball"><div class="blackNumber">14</div></div>
-                    <div class="">37次</div>
-                  </td>
-                  <td>
-                    <div class="ball"><div class="blackNumber">15</div></div>
-                    <div class="">37次</div>
-                  </td>
-                  <td>
-                    <div class="ball"><div class="blackNumber">16</div></div>
-                    <div class="">37次</div>
-                  </td>
-                  <td>
-                    <div class="ball"><div class="blackNumber">17</div></div>
-                    <div class="">37次</div>
-                  </td>
-                  <td>
-                    <div class="ball"><div class="blackNumber">18</div></div>
-                    <div class="">37次</div>
-                  </td>
-                  <td>
-                    <div class="ball"><div class="blackNumber">19</div></div>
-                    <div class="">37次</div>
-                  </td>
-                  <td>
-                    <div class="ball"><div class="blackNumber">20</div></div>
-                    <div class="">37次</div>
-                  </td>
-                </tr>
-                <tr>
-                  <td>
-                    <div class="ball"><div class="blackNumber">71</div></div>
-                    <div class="">37次</div>
-                  </td>
-                  <td>
-                    <div class="ball"><div class="blackNumber">72</div></div>
-                    <div class="">37次</div>
-                  </td>
-                  <td>
-                    <div class="ball"><div class="blackNumber">73</div></div>
-                    <div class="">37次</div>
-                  </td>
-                  <td>
-                    <div class="ball"><div class="blackNumber">74</div></div>
-                    <div class="">37次</div>
-                  </td>
-                  <td>
-                    <div class="ball"><div class="blackNumber">75</div></div>
-                    <div class="">37次</div>
-                  </td>
-                  <td>
-                    <div class="ball"><div class="blackNumber">76</div></div>
-                    <div class="">37次</div>
-                  </td>
-                  <td>
-                    <div class="ball"><div class="blackNumber">77</div></div>
-                    <div class="">37次</div>
-                  </td>
-                  <td>
-                    <div class="ball"><div class="blackNumber">78</div></div>
-                    <div class="">37次</div>
-                  </td>
-                  <td>
-                    <div class="ball"><div class="blackNumber">79</div></div>
-                    <div class="">37次</div>
-                  </td>
-                  <td>
-                    <div class="ball"><div class="blackNumber">80</div></div>
-                    <div class="">37次</div>
+                <tr v-for="(items, i) in hotBalls" :key="i">
+                  <td v-for="(content, j) in items" :key="j">
+                    <div class="ball"><div class="blackNumber">{{ content.ball }}</div></div>
+                    <div class="">{{ content.count }}次</div>
                   </td>
                 </tr>
               </tbody>
@@ -430,6 +202,54 @@
 
 <script>
 export default {
+  name: 'BingoHome',
+  data () {
+    return {
+      // 歷史開獎紀錄列表
+      historyList: [
+        { number: '000000001', balls: '01,02,03,04,05,06,07,08,09,10,11,12,13,14,15,16,17,18,19,20', superBall: '10', totalBalls: '210' },
+        { number: '000000002', balls: '01,02,03,04,05,06,07,08,09,10,11,12,13,14,15,16,17,18,19,20', superBall: '05', totalBalls: '210' },
+        { number: '000000003', balls: '01,02,03,04,05,06,07,08,09,10,11,12,13,14,15,16,17,18,19,20', superBall: '13', totalBalls: '210' },
+        { number: '000000004', balls: '01,02,03,04,05,06,07,08,09,10,11,12,13,14,15,16,17,18,19,20', superBall: '20', totalBalls: '210' },
+        { number: '000000005', balls: '01,02,03,04,05,06,07,08,09,10,11,12,13,14,15,16,17,18,19,20', superBall: '17', totalBalls: '210' }
+      ],
+      // 冷熱碼列表
+      hotBalls: [
+        [
+          {ball: '01', count: '27'},{ball: '02', count: '27'},{ball: '03', count: '27'},{ball: '04', count: '27'},{ball: '05', count: '27'},
+          {ball: '06', count: '27'},{ball: '07', count: '27'},{ball: '08', count: '27'},{ball: '09', count: '27'},{ball: '10', count: '27'}
+        ],
+        [
+          {ball: '11', count: '27'},{ball: '12', count: '27'},{ball: '13', count: '27'},{ball: '14', count: '27'},{ball: '15', count: '27'},
+          {ball: '16', count: '27'},{ball: '17', count: '27'},{ball: '18', count: '27'},{ball: '19', count: '27'},{ball: '20', count: '27'}
+        ],
+        [
+          {ball: '21', count: '27'},{ball: '22', count: '27'},{ball: '23', count: '27'},{ball: '24', count: '27'},{ball: '25', count: '27'},
+          {ball: '26', count: '27'},{ball: '27', count: '27'},{ball: '28', count: '27'},{ball: '29', count: '27'},{ball: '30', count: '27'}
+        ],
+        [
+          {ball: '31', count: '27'},{ball: '32', count: '27'},{ball: '33', count: '27'},{ball: '34', count: '27'},{ball: '35', count: '27'},
+          {ball: '36', count: '27'},{ball: '37', count: '27'},{ball: '38', count: '27'},{ball: '39', count: '27'},{ball: '40', count: '27'}
+        ],
+        [
+          {ball: '41', count: '27'},{ball: '42', count: '27'},{ball: '43', count: '27'},{ball: '44', count: '27'},{ball: '45', count: '27'},
+          {ball: '46', count: '27'},{ball: '47', count: '27'},{ball: '48', count: '27'},{ball: '49', count: '27'},{ball: '50', count: '27'}
+        ],
+        [
+          {ball: '51', count: '27'},{ball: '52', count: '27'},{ball: '53', count: '27'},{ball: '54', count: '27'},{ball: '55', count: '27'},
+          {ball: '56', count: '27'},{ball: '57', count: '27'},{ball: '58', count: '27'},{ball: '59', count: '27'},{ball: '60', count: '27'}
+        ],
+        [
+          {ball: '61', count: '27'},{ball: '62', count: '27'},{ball: '63', count: '27'},{ball: '64', count: '27'},{ball: '65', count: '27'},
+          {ball: '66', count: '27'},{ball: '67', count: '27'},{ball: '68', count: '27'},{ball: '69', count: '27'},{ball: '70', count: '27'}
+        ],
+        [
+          {ball: '71', count: '27'},{ball: '72', count: '27'},{ball: '73', count: '27'},{ball: '74', count: '27'},{ball: '75', count: '27'},
+          {ball: '76', count: '27'},{ball: '77', count: '27'},{ball: '78', count: '27'},{ball: '79', count: '27'},{ball: '80', count: '27'}
+        ]
+      ]
+    }
+  }
 }
 </script>
 
@@ -566,7 +386,6 @@ export default {
       padding: 10px;
       font-family: Arial;
       font-size: 20px;
-      color: #027eff;
     }
   }
 
