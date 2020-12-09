@@ -200,8 +200,12 @@
               <tbody>
                 <tr v-for="(items, i) in hotBalls" :key="i">
                   <td class="align-middle" v-for="(content, j) in items" :key="j">
-                    <div class="ball"><div class="defaultBall blackTextBall">{{ content.ball }}</div></div>
-                    <div class="pt-1">{{ content.count }}次</div>
+                    <div class="ball float-left">
+                      <div class="defaultBall blackTextBall">{{ content.ball }}</div>
+                    </div>
+                    <div class="pt-1">
+                      {{ content.count }}次
+                    </div>
                   </td>
                 </tr>
               </tbody>
