@@ -16,51 +16,53 @@
         <div class="currentInfo mt-3">
           <div class="row">
             <!-- 倒數器 -->
-            <div class="countdown col-md-4 col-sm-12 pb-3">
+            <div class="countdown col-md-3 col-sm-12 pb-3">
               <p>距離下期開獎剩餘</p>
-              <div class="d-flex justify-content-center text-center">
-                <span class="timeMinutes">
+              <div class="d-flex justify-content-center pt-2 pb-2">
+                <span class="time font-weight-bold">
                   03
                 </span>
                 <span class="timeColon">:</span>
-                <span class="timeSeconds">
+                <span class="time font-weight-bold">
                   56
                 </span>
               </div>
             </div>
 
             <!-- 當前期號 -->
-            <div class="currentNumber col-md-4 col-sm-12 pb-3 text-md-left text-sm-center">
+            <div class="currentNumber col-md-5 col-sm-12 pb-3 text-center">
               <p>第<span>000000005</span>期</p>
-              <div class="ball">
-                <div class="whiteNumber">01</div>
-                <div class="whiteNumber">02</div>
-                <div class="whiteNumber">03</div>
-                <div class="whiteNumber">04</div>
-                <div class="whiteNumber">05</div>
-                <div class="whiteNumber">06</div>
-                <div class="whiteNumber">07</div>
-                <div class="whiteNumber">08</div>
-                <div class="whiteNumber">09</div>
-                <div class="whiteNumber">10</div>
-                <div class="whiteNumber">11</div>
-                <div class="whiteNumber">12</div>
-                <div class="whiteNumber">13</div>
-                <div class="whiteNumber">14</div>
-                <div class="whiteNumber">15</div>
-                <div class="whiteNumber">16</div>
-                <div class="whiteNumber">17</div>
-                <div class="whiteNumber">18</div>
-                <div class="whiteNumber">19</div>
-                <div class="whiteNumber superNumber">20</div>
+              <div class="d-flex justify-content-center pt-2 pb-2">
+                <div class="ball" style="max-width: 320px;">
+                  <div class="defaultBall">01</div>
+                  <div class="defaultBall">02</div>
+                  <div class="defaultBall">03</div>
+                  <div class="defaultBall">04</div>
+                  <div class="defaultBall">05</div>
+                  <div class="defaultBall">06</div>
+                  <div class="defaultBall">07</div>
+                  <div class="defaultBall">08</div>
+                  <div class="defaultBall">09</div>
+                  <div class="defaultBall">10</div>
+                  <div class="defaultBall">11</div>
+                  <div class="defaultBall">12</div>
+                  <div class="defaultBall">13</div>
+                  <div class="defaultBall">14</div>
+                  <div class="defaultBall">15</div>
+                  <div class="defaultBall">16</div>
+                  <div class="defaultBall">17</div>
+                  <div class="defaultBall">18</div>
+                  <div class="defaultBall">19</div>
+                  <div class="defaultBall specialBall">20</div>
+                </div>
               </div>
             </div>
 
             <!-- 超級獎號 -->
             <div class="col-md-2 col-sm-6 pb-3">
               <p>超級獎號</p>
-              <div class="d-flex justify-content-center text-center">
-                <div class="superBall">
+              <div class="d-flex justify-content-center">
+                <div class="superBall font-weight-bold">
                   20
                 </div>
               </div>
@@ -69,8 +71,8 @@
             <!-- 獎號總和 -->
             <div class="col-md-2 col-sm-6">
               <p>獎號總和</p>
-              <div class="d-flex justify-content-center text-center">
-                <div class="totalBall text-primary">
+              <div class="d-flex justify-content-center">
+                <div class="totalBall font-weight-bold text-primary">
                   210
                 </div>
               </div>
@@ -82,26 +84,26 @@
         <div class="predictionInfo mt-3 text-left d-flex align-items-center">
           <span class="predictionNumber">000000006期預測總和 小</span>
           <span class="ball ml-4">
-            <div class="blackNumber">01</div>
-            <div class="blackNumber">02</div>
-            <div class="blackNumber">03</div>
-            <div class="blackNumber">04</div>
-            <div class="blackNumber">05</div>
-            <div class="blackNumber">06</div>
-            <div class="blackNumber">07</div>
-            <div class="blackNumber superNumber">08</div>
-            <div class="blackNumber">09</div>
-            <div class="blackNumber">10</div>
-            <div class="blackNumber">11</div>
-            <div class="blackNumber">12</div>
-            <div class="blackNumber">13</div>
-            <div class="blackNumber">14</div>
-            <div class="blackNumber">15</div>
-            <div class="blackNumber">16</div>
-            <div class="blackNumber">17</div>
-            <div class="blackNumber">18</div>
-            <div class="blackNumber">19</div>
-            <div class="blackNumber">20</div>
+            <div class="defaultBall blackTextBall">01</div>
+            <div class="defaultBall blackTextBall">02</div>
+            <div class="defaultBall blackTextBall">03</div>
+            <div class="defaultBall blackTextBall">04</div>
+            <div class="defaultBall blackTextBall">05</div>
+            <div class="defaultBall blackTextBall">06</div>
+            <div class="defaultBall blackTextBall">07</div>
+            <div class="defaultBall blackTextBall specialBall">08</div>
+            <div class="defaultBall blackTextBall">09</div>
+            <div class="defaultBall blackTextBall">10</div>
+            <div class="defaultBall blackTextBall">11</div>
+            <div class="defaultBall blackTextBall">12</div>
+            <div class="defaultBall blackTextBall">13</div>
+            <div class="defaultBall blackTextBall">14</div>
+            <div class="defaultBall blackTextBall">15</div>
+            <div class="defaultBall blackTextBall">16</div>
+            <div class="defaultBall blackTextBall">17</div>
+            <div class="defaultBall blackTextBall">18</div>
+            <div class="defaultBall blackTextBall">19</div>
+            <div class="defaultBall blackTextBall">20</div>
           </span>
         </div>
 
@@ -134,29 +136,29 @@
                   <td class="align-middle">第{{ items.number }}期</td>
                   <td class="align-middle">
                     <!-- <div class="ball">
-                      <div class="blackNumber">01</div>
-                      <div class="blackNumber">02</div>
-                      <div class="blackNumber superNumber">03</div>
-                      <div class="blackNumber">04</div>
-                      <div class="blackNumber">05</div>
-                      <div class="blackNumber">06</div>
-                      <div class="blackNumber">07</div>
-                      <div class="blackNumber">08</div>
-                      <div class="blackNumber">09</div>
-                      <div class="blackNumber">10</div>
-                      <div class="blackNumber">11</div>
-                      <div class="blackNumber">12</div>
-                      <div class="blackNumber">13</div>
-                      <div class="blackNumber">14</div>
-                      <div class="blackNumber">15</div>
-                      <div class="blackNumber">16</div>
-                      <div class="blackNumber">17</div>
-                      <div class="blackNumber">18</div>
-                      <div class="blackNumber">19</div>
-                      <div class="blackNumber">20</div>
+                      <div class="defaultBall blackTextBall">01</div>
+                      <div class="defaultBall blackTextBall">02</div>
+                      <div class="defaultBall blackTextBall specialBall">03</div>
+                      <div class="defaultBall blackTextBall">04</div>
+                      <div class="defaultBall blackTextBall">05</div>
+                      <div class="defaultBall blackTextBall">06</div>
+                      <div class="defaultBall blackTextBall">07</div>
+                      <div class="defaultBall blackTextBall">08</div>
+                      <div class="defaultBall blackTextBall">09</div>
+                      <div class="defaultBall blackTextBall">10</div>
+                      <div class="defaultBall blackTextBall">11</div>
+                      <div class="defaultBall blackTextBall">12</div>
+                      <div class="defaultBall blackTextBall">13</div>
+                      <div class="defaultBall blackTextBall">14</div>
+                      <div class="defaultBall blackTextBall">15</div>
+                      <div class="defaultBall blackTextBall">16</div>
+                      <div class="defaultBall blackTextBall">17</div>
+                      <div class="defaultBall blackTextBall">18</div>
+                      <div class="defaultBall blackTextBall">19</div>
+                      <div class="defaultBall blackTextBall">20</div>
                     </div> -->
                     <div class="ball">
-                      <div :class="['blackNumber', {'superNumber': ball === items.superBall}]" v-for="ball in items.balls.split(',')">{{ ball }}</div>
+                      <div :class="['defaultBall blackTextBall', {'specialBall': ball === items.superBall}]" v-for="ball in items.balls.split(',')">{{ ball }}</div>
                     </div>
                   </td>
                   <td class="align-middle">
@@ -185,7 +187,7 @@
               <tbody>
                 <tr v-for="(items, i) in hotBalls" :key="i">
                   <td v-for="(content, j) in items" :key="j">
-                    <div class="ball"><div class="blackNumber">{{ content.ball }}</div></div>
+                    <div class="ball"><div class="defaultBall blackTextBall">{{ content.ball }}</div></div>
                     <div class="">{{ content.count }}次</div>
                   </td>
                 </tr>
@@ -216,36 +218,36 @@ export default {
       // 冷熱碼列表
       hotBalls: [
         [
-          {ball: '01', count: '27'},{ball: '02', count: '27'},{ball: '03', count: '27'},{ball: '04', count: '27'},{ball: '05', count: '27'},
-          {ball: '06', count: '27'},{ball: '07', count: '27'},{ball: '08', count: '27'},{ball: '09', count: '27'},{ball: '10', count: '27'}
+          {ball: '01', count: '0'},{ball: '02', count: '0'},{ball: '03', count: '0'},{ball: '04', count: '0'},{ball: '05', count: '95'},
+          {ball: '06', count: '0'},{ball: '07', count: '100'},{ball: '08', count: '0'},{ball: '09', count: '0'},{ball: '10', count: '98'}
         ],
         [
-          {ball: '11', count: '27'},{ball: '12', count: '27'},{ball: '13', count: '27'},{ball: '14', count: '27'},{ball: '15', count: '27'},
-          {ball: '16', count: '27'},{ball: '17', count: '27'},{ball: '18', count: '27'},{ball: '19', count: '27'},{ball: '20', count: '27'}
+          {ball: '11', count: '0'},{ball: '12', count: '0'},{ball: '13', count: '0'},{ball: '14', count: '0'},{ball: '15', count: '0'},
+          {ball: '16', count: '0'},{ball: '17', count: '0'},{ball: '18', count: '0'},{ball: '19', count: '0'},{ball: '20', count: '102'}
         ],
         [
-          {ball: '21', count: '27'},{ball: '22', count: '27'},{ball: '23', count: '27'},{ball: '24', count: '27'},{ball: '25', count: '27'},
-          {ball: '26', count: '27'},{ball: '27', count: '27'},{ball: '28', count: '27'},{ball: '29', count: '27'},{ball: '30', count: '27'}
+          {ball: '21', count: '0'},{ball: '22', count: '0'},{ball: '23', count: '0'},{ball: '24', count: '0'},{ball: '25', count: '0'},
+          {ball: '26', count: '0'},{ball: '27', count: '0'},{ball: '28', count: '0'},{ball: '29', count: '0'},{ball: '30', count: '0'}
         ],
         [
-          {ball: '31', count: '27'},{ball: '32', count: '27'},{ball: '33', count: '27'},{ball: '34', count: '27'},{ball: '35', count: '27'},
-          {ball: '36', count: '27'},{ball: '37', count: '27'},{ball: '38', count: '27'},{ball: '39', count: '27'},{ball: '40', count: '27'}
+          {ball: '31', count: '0'},{ball: '32', count: '0'},{ball: '33', count: '0'},{ball: '34', count: '0'},{ball: '35', count: '0'},
+          {ball: '36', count: '0'},{ball: '37', count: '0'},{ball: '38', count: '0'},{ball: '39', count: '0'},{ball: '40', count: '0'}
         ],
         [
-          {ball: '41', count: '27'},{ball: '42', count: '27'},{ball: '43', count: '27'},{ball: '44', count: '27'},{ball: '45', count: '27'},
-          {ball: '46', count: '27'},{ball: '47', count: '27'},{ball: '48', count: '27'},{ball: '49', count: '27'},{ball: '50', count: '27'}
+          {ball: '41', count: '0'},{ball: '42', count: '0'},{ball: '43', count: '0'},{ball: '44', count: '0'},{ball: '45', count: '0'},
+          {ball: '46', count: '0'},{ball: '47', count: '0'},{ball: '48', count: '0'},{ball: '49', count: '0'},{ball: '50', count: '0'}
         ],
         [
-          {ball: '51', count: '27'},{ball: '52', count: '27'},{ball: '53', count: '27'},{ball: '54', count: '27'},{ball: '55', count: '27'},
-          {ball: '56', count: '27'},{ball: '57', count: '27'},{ball: '58', count: '27'},{ball: '59', count: '27'},{ball: '60', count: '27'}
+          {ball: '51', count: '0'},{ball: '52', count: '0'},{ball: '53', count: '0'},{ball: '54', count: '0'},{ball: '55', count: '0'},
+          {ball: '56', count: '0'},{ball: '57', count: '0'},{ball: '58', count: '0'},{ball: '59', count: '0'},{ball: '60', count: '0'}
         ],
         [
-          {ball: '61', count: '27'},{ball: '62', count: '27'},{ball: '63', count: '27'},{ball: '64', count: '27'},{ball: '65', count: '27'},
-          {ball: '66', count: '27'},{ball: '67', count: '27'},{ball: '68', count: '27'},{ball: '69', count: '27'},{ball: '70', count: '27'}
+          {ball: '61', count: '0'},{ball: '62', count: '0'},{ball: '63', count: '0'},{ball: '64', count: '0'},{ball: '65', count: '0'},
+          {ball: '66', count: '0'},{ball: '67', count: '0'},{ball: '68', count: '0'},{ball: '69', count: '0'},{ball: '70', count: '0'}
         ],
         [
-          {ball: '71', count: '27'},{ball: '72', count: '27'},{ball: '73', count: '27'},{ball: '74', count: '27'},{ball: '75', count: '27'},
-          {ball: '76', count: '27'},{ball: '77', count: '27'},{ball: '78', count: '27'},{ball: '79', count: '27'},{ball: '80', count: '27'}
+          {ball: '71', count: '0'},{ball: '72', count: '0'},{ball: '73', count: '0'},{ball: '74', count: '0'},{ball: '75', count: '0'},
+          {ball: '76', count: '0'},{ball: '77', count: '0'},{ball: '78', count: '0'},{ball: '79', count: '0'},{ball: '80', count: '50'}
         ]
       ]
     }
@@ -257,7 +259,7 @@ export default {
 .tinyBingo {
   /* 當前資訊區 */
   .currentInfo {
-    padding: 20px;
+    padding: 16px 0 10px 0;
     border-radius: 4px;
     background-color: #f6f9fa;
     p {
@@ -267,8 +269,7 @@ export default {
 
     // 倒數器
     .countdown {
-      .timeMinutes,
-      .timeSeconds {
+      .time {
         float: left;
         width: 54px;
         height: 60px;
@@ -276,7 +277,6 @@ export default {
         box-shadow: 1px 1px 4px 0 rgba(80, 80, 80, 0.5);
         background-color: #919aa3;
         padding: 5px;
-        font-family: Arial;
         font-size: 36px;
         color: #ffffff;
       }
@@ -286,21 +286,10 @@ export default {
         color: #919aa3;
       }
     }
+
     // 當期球號
-    .currentNumber {
-      // 球號
-      // .ball div {
-      //   float: left;
-      //   width: 28px;
-      //   height: 28px;
-      //   color: #fff;
-      //   margin: 0px 5px 5px 0px;
-      //   border-radius: 50%;
-      //   background-color: #ffb14e;
-      //   line-height: 28px;
-      //   text-align: center;
-      // }
-    }
+    .currentNumber {}
+
     // 超級獎號
     .superBall {
       width: 80px;
@@ -310,12 +299,13 @@ export default {
       border-radius: 50%;
       background-image: linear-gradient(to bottom, #ff4e4e 1%, #d70a0a);
       color: #fff;
-      font-size: 38px;
+      font-size: 40px;
+      margin: 0 auto;
     }
+
     // 獎號總和
     .totalBall {
       padding: 10px;
-      font-family: Arial;
       font-size: 40px;
       color: #029fff;
     }
@@ -329,18 +319,6 @@ export default {
     .predictionNumber {
       color: #ff4e4e;
     }
-    // 球號
-    // .ball div {
-    //   float: left;
-    //   width: 28px;
-    //   height: 28px;
-    //   color: #fff;
-    //   margin: 0px 2px;
-    //   border-radius: 50%;
-    //   background-color: #ffb14e;
-    //   line-height: 28px;
-    //   text-align: center;
-    // }
   }
 
   /* 分頁分析區 */
@@ -357,19 +335,8 @@ export default {
       color: #919aa3;
     }
   }
+  // 表格
   .tableList {
-    // 開獎號碼
-    // .ball div {
-    //   float: left;
-    //   width: 28px;
-    //   height: 28px;
-    //   color: #fff;
-    //   margin: 0px 5px 5px 0px;
-    //   border-radius: 50%;
-    //   background-color: #ffb14e;
-    //   line-height: 28px;
-    //   text-align: center;
-    // }
     // 超級獎號
     .superBall {
       width: 50px;
@@ -384,38 +351,36 @@ export default {
     // 獎號總和
     .totalBall {
       padding: 10px;
-      font-family: Arial;
       font-size: 20px;
     }
   }
 
+  /* 共用 */
   // 球號
   .ball {
-    div {
+    .defaultBall {
       float: left;
-      width: 28px;
-      height: 28px;
+      width: 26px;
+      height: 26px;
       margin: 0px 5px 5px 0px;
       border-radius: 50%;
-      line-height: 1.9;
+      line-height: 26px;
       text-align: center;
-    }
-    // 白色文字球號
-    .whiteNumber {
+      font-weight: 500;
       color: #fff;
       background-color: #ffb14e;
     }
-    // 白色文字超級獎號
-    .whiteNumber.superNumber {
+    // 預設超級獎號
+    .defaultBall.specialBall {
       background-color: #ff4e4e;
     }
     // 黑色文字球號
-    .blackNumber {
+    .blackTextBall {
       color: #151515;
       background-color: #ffd196;
     }
     // 黑色文字超級獎號
-    .blackNumber.superNumber {
+    .blackTextBall.specialBall {
       background-color: #ffabab;
     }
   }
