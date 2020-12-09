@@ -59,7 +59,7 @@
             </div>
 
             <!-- 超級獎號 -->
-            <div class="col-md-2 col-sm-6 pb-3">
+            <div class="col-md-2 col-6 pb-3">
               <p>超級獎號</p>
               <div class="d-flex justify-content-center">
                 <div class="superBall font-weight-bold">
@@ -69,7 +69,7 @@
             </div>
 
             <!-- 獎號總和 -->
-            <div class="col-md-2 col-sm-6">
+            <div class="col-md-2 col-6">
               <p>獎號總和</p>
               <div class="d-flex justify-content-center">
                 <div class="totalBall font-weight-bold text-primary">
@@ -81,30 +81,32 @@
         </div>
 
         <!-- 預測資訊區 -->
-        <div class="predictionInfo mt-3 text-left d-flex align-items-center">
-          <span class="predictionNumber">000000006期預測總和 小</span>
-          <span class="ball ml-4">
-            <div class="defaultBall blackTextBall">01</div>
-            <div class="defaultBall blackTextBall">02</div>
-            <div class="defaultBall blackTextBall">03</div>
-            <div class="defaultBall blackTextBall">04</div>
-            <div class="defaultBall blackTextBall">05</div>
-            <div class="defaultBall blackTextBall">06</div>
-            <div class="defaultBall blackTextBall">07</div>
-            <div class="defaultBall blackTextBall specialBall">08</div>
-            <div class="defaultBall blackTextBall">09</div>
-            <div class="defaultBall blackTextBall">10</div>
-            <div class="defaultBall blackTextBall">11</div>
-            <div class="defaultBall blackTextBall">12</div>
-            <div class="defaultBall blackTextBall">13</div>
-            <div class="defaultBall blackTextBall">14</div>
-            <div class="defaultBall blackTextBall">15</div>
-            <div class="defaultBall blackTextBall">16</div>
-            <div class="defaultBall blackTextBall">17</div>
-            <div class="defaultBall blackTextBall">18</div>
-            <div class="defaultBall blackTextBall">19</div>
-            <div class="defaultBall blackTextBall">20</div>
-          </span>
+        <div class="predictionInfo mt-3">
+          <div class="text-left d-flex align-items-center">
+            <div class="predictionNumber ml-4">000000006期預測總和 小</div>
+            <div class="ball ml-4">
+              <div class="defaultBall blackTextBall">01</div>
+              <div class="defaultBall blackTextBall">02</div>
+              <div class="defaultBall blackTextBall">03</div>
+              <div class="defaultBall blackTextBall">04</div>
+              <div class="defaultBall blackTextBall">05</div>
+              <div class="defaultBall blackTextBall">06</div>
+              <div class="defaultBall blackTextBall">07</div>
+              <div class="defaultBall blackTextBall specialBall">08</div>
+              <div class="defaultBall blackTextBall">09</div>
+              <div class="defaultBall blackTextBall">10</div>
+              <div class="defaultBall blackTextBall">11</div>
+              <div class="defaultBall blackTextBall">12</div>
+              <div class="defaultBall blackTextBall">13</div>
+              <div class="defaultBall blackTextBall">14</div>
+              <div class="defaultBall blackTextBall">15</div>
+              <div class="defaultBall blackTextBall">16</div>
+              <div class="defaultBall blackTextBall">17</div>
+              <div class="defaultBall blackTextBall">18</div>
+              <div class="defaultBall blackTextBall">19</div>
+              <div class="defaultBall blackTextBall">20</div>
+            </div>
+          </div>
         </div>
 
         <!-- 分頁分析區 -->
@@ -431,7 +433,7 @@ export default {
   // 球號
   .ball {
     .defaultBall {
-      float: left;
+      display: inline-block;
       width: 26px;
       height: 26px;
       margin: 2px 5px 2px 0px;
@@ -485,6 +487,12 @@ export default {
   }
   .table-striped tbody tr:nth-of-type(even){
     background-color: #fbfcfc;
+  }
+
+  @media (max-width:992px) {
+    .predictionInfo .d-flex {
+      display: unset !important;
+    }
   }
 }
 </style>
