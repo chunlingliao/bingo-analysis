@@ -207,8 +207,8 @@
         <!-- 超級開獎號碼 -->
         <div class="tab-pane fade" id="pills-super" role="tabpanel" aria-labelledby="pills-super-tab">
           <div class="super-tab-bg">
-            <div style="height:350px">
-              走勢圖在這！
+            <div class="mb-5">
+              <canvas id="myChart"></canvas>
             </div>
           </div>
         </div>
@@ -238,6 +238,8 @@
 
 <script>
 import $ from 'jquery'
+import Chart from 'chart.js'
+
 export default {
   name: "",
   props: {},
@@ -283,7 +285,6 @@ export default {
   },
   methods: {
     // 初始
-     
   },
   //BEGIN--生命週期
   beforeCreate: function() {
@@ -299,6 +300,43 @@ export default {
   mounted: function() {
     //元素已掛載， $el 被建立。
     console.log(window.customElements)
+    
+    var ctx2 = document.getElementById("myChart");
+
+    var myChart = new Chart(ctx2, {
+        type: "line",
+        data: {
+            labels: ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"],
+            datasets: [
+                {
+                  // label: "超級獎號",
+                  // backgroundColor: "rgba(225,10,10,0.3)",
+                  borderColor: "#057eff",
+                  // borderWidth: 1,
+                  // pointStrokeColor: "#fff",
+                  // pointStyle: "crossRot",
+                  data: [65, 59, 0, 51, 56, 10, 40, 22, 32, 54, 10, 30],
+                  cubicInterpolationMode: "monotone",
+                  spanGaps: "false",
+                  fill: "false"
+                }
+            ]
+        },
+        options: {
+          legend: {
+            display: false
+          },
+        scales: {
+            yAxes: [{
+                ticks: {
+                    suggestedMin: 0,
+                    suggestedMax: 80
+                }
+            }]
+          }
+      }
+    });
+
     //gotop
     $(window).scroll(function () {
       if ($(this).scrollTop() > 100) {
@@ -331,6 +369,4 @@ export default {
 </script>
 
 <style>
-
-
 </style>
