@@ -210,10 +210,14 @@
     </main>
 
     <footer></footer>
+
+    <a href="#" class="toTop" title="GoTop" style="display: inline;"><span></span></a>
   </div>
 </template>
 
 <script>
+import $ from 'jquery'
+
 export default {
   name: 'BingoHome',
   data () {
@@ -224,7 +228,12 @@ export default {
         { number: '000000002', balls: '01,02,03,04,05,06,07,08,09,10,11,12,13,14,15,16,17,18,19,20', superBall: '05', totalBalls: '210' },
         { number: '000000003', balls: '01,02,03,04,05,06,07,08,09,10,11,12,13,14,15,16,17,18,19,20', superBall: '13', totalBalls: '210' },
         { number: '000000004', balls: '01,02,03,04,05,06,07,08,09,10,11,12,13,14,15,16,17,18,19,20', superBall: '20', totalBalls: '210' },
-        { number: '000000005', balls: '01,02,03,04,05,06,07,08,09,10,11,12,13,14,15,16,17,18,19,20', superBall: '17', totalBalls: '210' }
+        { number: '000000005', balls: '01,02,03,04,05,06,07,08,09,10,11,12,13,14,15,16,17,18,19,20', superBall: '17', totalBalls: '210' },
+        { number: '000000006', balls: '01,02,03,04,05,06,07,08,09,10,11,12,13,14,15,16,17,18,19,20', superBall: '03', totalBalls: '210' },
+        { number: '000000007', balls: '01,02,03,04,05,06,07,08,09,10,41,42,43,44,45,46,47,48,49,50', superBall: '44', totalBalls: '210' },
+        { number: '000000008', balls: '01,02,03,04,05,06,07,08,09,10,11,12,13,14,15,16,17,18,19,20', superBall: '10', totalBalls: '210' },
+        { number: '000000009', balls: '01,02,03,04,05,06,07,08,09,10,11,12,13,14,15,16,17,18,19,20', superBall: '04', totalBalls: '210' },
+        { number: '000000010', balls: '11,12,13,14,15,16,17,18,19,20,31,32,33,34,35,36,37,38,39,40', superBall: '31', totalBalls: '210' }
       ],
       // 冷熱碼列表
       hotBalls: [
@@ -261,6 +270,27 @@ export default {
           {ball: '76', count: '0'},{ball: '77', count: '0'},{ball: '78', count: '0'},{ball: '79', count: '0'},{ball: '80', count: '50'}
         ]
       ]
+    }
+  },
+  mounted () {
+    this.setGoToTop()
+  },
+  methods: {
+    setGoToTop () {
+      // gotop
+      $(window).scroll(function () {
+        if ($(this).scrollTop() > 100) {
+          $('.toTop').fadeIn()
+        } else {
+          $('.toTop').fadeOut()
+        }
+      })
+      $('.toTop').click(function () {
+        $('html, body').animate({
+          scrollTop: 0
+        }, 800)
+        return false
+      })
     }
   }
 }
@@ -365,6 +395,36 @@ export default {
       padding: 10px;
       font-size: 20px;
     }
+  }
+
+  /* gototop */
+  .toTop span {
+    position: fixed;
+    bottom: 70px;
+    right: 24px;
+    opacity: .9;
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    text-align: center;
+    background: #54a0e5;
+    box-shadow: 1px 1px 4px 0 rgb(2, 46, 93);
+    line-height: 45px;
+    z-index: 9
+  }
+  .toTop span:hover {
+    background: #057eff
+  }
+  .toTop span::before {
+    content: "";
+    position: absolute;
+    left: calc(50% - 7.5px);
+    top: calc(50% - 14px);
+    width: 0;
+    height: 15px;
+    border: 7px solid transparent;
+    border-top: 10px solid #f6f6f6;
+    transform: rotate(180deg)
   }
 
   /* 共用 */
