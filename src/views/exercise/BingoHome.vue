@@ -191,7 +191,9 @@
 
           <!-- 超級獎號走勢 -->
           <div class="tab-pane fade" id="pills-profile" role="tabpanel" aria-labelledby="pills-tab2">
-            .....
+            <div class="bg-superBallChart">
+              ...
+            </div>
           </div>
 
           <!-- 冷熱碼 -->
@@ -401,6 +403,10 @@ export default {
       padding: 10px;
       font-size: 20px;
     }
+  }
+  // 超級獎號走勢圖背景
+  .bg-superBallChart {
+    background-color: #f6f9fa;
   }
 
   /* gototop */
