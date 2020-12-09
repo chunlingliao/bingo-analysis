@@ -33,7 +33,7 @@
             <div class="currentNumber col-md-5 col-sm-12 pb-3 text-center">
               <p>第<span>000000005</span>期</p>
               <div class="d-flex justify-content-center pt-2 pb-2">
-                <div class="ball" style="max-width: 320px;">
+                <div class="ball w-320">
                   <div class="defaultBall">01</div>
                   <div class="defaultBall">02</div>
                   <div class="defaultBall">03</div>
@@ -109,66 +109,77 @@
 
         <!-- 分頁分析區 -->
         <ul class="nav nav-pills mt-3 mb-3" id="pills-tab" role="tablist">
-          <li class="nav-item mr-2" role="presentation">
-            <a class="nav-link active" id="pills-tab1" data-toggle="pill" href="#pills-home" role="tab" aria-controls="pills-home" aria-selected="true">歷史開獎紀錄(1)</a>
+          <li class="nav-item mr-2 mt-1 mb-1" role="presentation">
+            <a class="nav-link active" id="pills-tab1" data-toggle="pill" href="#pills-home" role="tab" aria-controls="pills-home" aria-selected="true">歷史開獎紀錄</a>
           </li>
-          <li class="nav-item mr-2" role="presentation">
-            <a class="nav-link" id="pills-tab2" data-toggle="pill" href="#pills-profile" role="tab" aria-controls="pills-profile" aria-selected="false">超級獎號走勢(1)</a>
+          <li class="nav-item mr-2 mt-1 mb-1" role="presentation">
+            <a class="nav-link" id="pills-tab2" data-toggle="pill" href="#pills-profile" role="tab" aria-controls="pills-profile" aria-selected="false">超級獎號走勢</a>
           </li>
-          <li class="nav-item mr-2" role="presentation">
-            <a class="nav-link" id="pills-tab3" data-toggle="pill" href="#pills-contact" role="tab" aria-controls="pills-contact" aria-selected="false">冷熱碼(1)</a>
+          <li class="nav-item mr-2 mt-1 mb-1" role="presentation">
+            <a class="nav-link" id="pills-tab3" data-toggle="pill" href="#pills-contact" role="tab" aria-controls="pills-contact" aria-selected="false">冷熱碼</a>
           </li>
         </ul>
         <div class="tab-content" id="pills-tabContent">
           <!-- 歷史開獎紀錄 -->
-          <div class="tab-pane fade show active" id="pills-home" role="tabpanel" aria-labelledby="pills-tab1">
+          <div class="overflow-auto tab-pane fade show active" id="pills-home" role="tabpanel" aria-labelledby="pills-tab1">
             <table class="table table-striped tableList">
               <thead>
                 <tr>
-                  <th scope="col">期別</th>
-                  <th scope="col">開獎號碼</th>
-                  <th scope="col">超級獎號</th>
-                  <th scope="col">獎號總和</th>
+                  <th class="align-middle" scope="col">期別</th>
+                  <th class="align-middle" scope="col">開獎號碼</th>
+                  <th class="align-middle" scope="col">超級獎號</th>
+                  <th class="align-middle" scope="col">獎號總和</th>
                 </tr>
               </thead>
               <tbody>
                 <tr v-for="(items, i) in historyList" :key="i">
-                  <td class="align-middle">第{{ items.number }}期</td>
-                  <td class="align-middle">
-                    <!-- <div class="ball">
-                      <div class="defaultBall blackTextBall">01</div>
-                      <div class="defaultBall blackTextBall">02</div>
-                      <div class="defaultBall blackTextBall specialBall">03</div>
-                      <div class="defaultBall blackTextBall">04</div>
-                      <div class="defaultBall blackTextBall">05</div>
-                      <div class="defaultBall blackTextBall">06</div>
-                      <div class="defaultBall blackTextBall">07</div>
-                      <div class="defaultBall blackTextBall">08</div>
-                      <div class="defaultBall blackTextBall">09</div>
-                      <div class="defaultBall blackTextBall">10</div>
-                      <div class="defaultBall blackTextBall">11</div>
-                      <div class="defaultBall blackTextBall">12</div>
-                      <div class="defaultBall blackTextBall">13</div>
-                      <div class="defaultBall blackTextBall">14</div>
-                      <div class="defaultBall blackTextBall">15</div>
-                      <div class="defaultBall blackTextBall">16</div>
-                      <div class="defaultBall blackTextBall">17</div>
-                      <div class="defaultBall blackTextBall">18</div>
-                      <div class="defaultBall blackTextBall">19</div>
-                      <div class="defaultBall blackTextBall">20</div>
-                    </div> -->
-                    <div class="ball">
-                      <div :class="['defaultBall blackTextBall', {'specialBall': ball === items.superBall}]" v-for="ball in items.balls.split(',')">{{ ball }}</div>
+                  <td class="align-middle font-weight-bold">
+                    <div class="w-130">
+                      第{{ items.number }}期
                     </div>
                   </td>
                   <td class="align-middle">
-                    <div class="superBall">
-                      {{ items.superBall }}
+                    <div class="d-flex justify-content-center">
+                      <div class="ball w-320">
+                        <div :class="['defaultBall blackTextBall', {'specialBall': ball === items.superBall}]" v-for="ball in items.balls.split(',')">{{ ball }}</div>
+                      </div>
+
+                      <!-- <div class="ball w-320">
+                        <div class="defaultBall blackTextBall">01</div>
+                        <div class="defaultBall blackTextBall">02</div>
+                        <div class="defaultBall blackTextBall specialBall">03</div>
+                        <div class="defaultBall blackTextBall">04</div>
+                        <div class="defaultBall blackTextBall">05</div>
+                        <div class="defaultBall blackTextBall">06</div>
+                        <div class="defaultBall blackTextBall">07</div>
+                        <div class="defaultBall blackTextBall">08</div>
+                        <div class="defaultBall blackTextBall">09</div>
+                        <div class="defaultBall blackTextBall">10</div>
+                        <div class="defaultBall blackTextBall">11</div>
+                        <div class="defaultBall blackTextBall">12</div>
+                        <div class="defaultBall blackTextBall">13</div>
+                        <div class="defaultBall blackTextBall">14</div>
+                        <div class="defaultBall blackTextBall">15</div>
+                        <div class="defaultBall blackTextBall">16</div>
+                        <div class="defaultBall blackTextBall">17</div>
+                        <div class="defaultBall blackTextBall">18</div>
+                        <div class="defaultBall blackTextBall">19</div>
+                        <div class="defaultBall blackTextBall">20</div>
+                      </div> -->
                     </div>
                   </td>
-                  <td class="align-middle">
-                    <div class="totalBall text-primary">
-                      {{ items.totalBalls }}
+                  <td class="align-middle font-weight-bold">
+                    <div class="d-flex justify-content-center">
+                      <div class="superBall">
+                        {{ items.superBall }}
+                      </div>
+                    </div>
+                  </td>
+                  <td class="align-middle font-weight-bold">
+                    <div class="d-flex justify-content-center">
+                      <div class="totalBall text-primary">
+                        {{ items.totalBalls }}
+                      </div>
                     </div>
                   </td>
                 </tr>
@@ -182,13 +193,13 @@
           </div>
 
           <!-- 冷熱碼 -->
-          <div class="tab-pane fade" id="pills-contact" role="tabpanel" aria-labelledby="pills-tab3">
+          <div class="overflow-auto tab-pane fade" id="pills-contact" role="tabpanel" aria-labelledby="pills-tab3">
             <table class="table table-striped tableList">
               <tbody>
                 <tr v-for="(items, i) in hotBalls" :key="i">
-                  <td v-for="(content, j) in items" :key="j">
+                  <td class="align-middle" v-for="(content, j) in items" :key="j">
                     <div class="ball"><div class="defaultBall blackTextBall">{{ content.ball }}</div></div>
-                    <div class="">{{ content.count }}次</div>
+                    <div class="pt-1">{{ content.count }}次</div>
                   </td>
                 </tr>
               </tbody>
@@ -318,6 +329,7 @@ export default {
     background-color: #ffefef;
     .predictionNumber {
       color: #ff4e4e;
+      font-weight: 500;
     }
   }
 
@@ -362,7 +374,7 @@ export default {
       float: left;
       width: 26px;
       height: 26px;
-      margin: 0px 5px 5px 0px;
+      margin: 2px 5px 2px 0px;
       border-radius: 50%;
       line-height: 26px;
       text-align: center;
@@ -383,6 +395,36 @@ export default {
     .blackTextBall.specialBall {
       background-color: #ffabab;
     }
+  }
+
+  // 寬度
+  .w-320 {
+    width: 320px;
+  }
+  .w-130 {
+    width: 130px;
+  }
+
+  // bootstrap表格覆蓋樣式
+  .table {
+    border: 1px solid #ebeef1;
+  }
+  .table td {
+    border-bottom: 1px solid #ebeef1;
+  }
+  .table td, .table th {
+    border-top: unset;
+  }
+  .table thead th {
+    background-color: #f1f3f6;
+    color: #919aa3;
+    border-bottom: 1px solid #ebeef1;
+  }
+  .table-striped tbody tr:nth-of-type(odd){
+    background-color: #ffffff;
+  }
+  .table-striped tbody tr:nth-of-type(even){
+    background-color: #fbfcfc;
   }
 }
 </style>
