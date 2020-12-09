@@ -59,7 +59,7 @@
             </div>
 
             <!-- 超級獎號 -->
-            <div class="col-md-2 col-sm-6 pb-3">
+            <div class="col-md-2 col-6 pb-3">
               <p>超級獎號</p>
               <div class="d-flex justify-content-center">
                 <div class="superBall font-weight-bold">
@@ -69,7 +69,7 @@
             </div>
 
             <!-- 獎號總和 -->
-            <div class="col-md-2 col-sm-6">
+            <div class="col-md-2 col-6">
               <p>獎號總和</p>
               <div class="d-flex justify-content-center">
                 <div class="totalBall font-weight-bold text-primary">
@@ -81,30 +81,32 @@
         </div>
 
         <!-- 預測資訊區 -->
-        <div class="predictionInfo mt-3 text-left d-flex align-items-center">
-          <span class="predictionNumber">000000006期預測總和 小</span>
-          <span class="ball ml-4">
-            <div class="defaultBall blackTextBall">01</div>
-            <div class="defaultBall blackTextBall">02</div>
-            <div class="defaultBall blackTextBall">03</div>
-            <div class="defaultBall blackTextBall">04</div>
-            <div class="defaultBall blackTextBall">05</div>
-            <div class="defaultBall blackTextBall">06</div>
-            <div class="defaultBall blackTextBall">07</div>
-            <div class="defaultBall blackTextBall specialBall">08</div>
-            <div class="defaultBall blackTextBall">09</div>
-            <div class="defaultBall blackTextBall">10</div>
-            <div class="defaultBall blackTextBall">11</div>
-            <div class="defaultBall blackTextBall">12</div>
-            <div class="defaultBall blackTextBall">13</div>
-            <div class="defaultBall blackTextBall">14</div>
-            <div class="defaultBall blackTextBall">15</div>
-            <div class="defaultBall blackTextBall">16</div>
-            <div class="defaultBall blackTextBall">17</div>
-            <div class="defaultBall blackTextBall">18</div>
-            <div class="defaultBall blackTextBall">19</div>
-            <div class="defaultBall blackTextBall">20</div>
-          </span>
+        <div class="predictionInfo mt-3">
+          <div class="text-left d-flex align-items-center">
+            <div class="predictionNumber ml-4">000000006期預測總和 小</div>
+            <div class="ball ml-4">
+              <div class="defaultBall blackTextBall">01</div>
+              <div class="defaultBall blackTextBall">02</div>
+              <div class="defaultBall blackTextBall">03</div>
+              <div class="defaultBall blackTextBall">04</div>
+              <div class="defaultBall blackTextBall">05</div>
+              <div class="defaultBall blackTextBall">06</div>
+              <div class="defaultBall blackTextBall">07</div>
+              <div class="defaultBall blackTextBall specialBall">08</div>
+              <div class="defaultBall blackTextBall">09</div>
+              <div class="defaultBall blackTextBall">10</div>
+              <div class="defaultBall blackTextBall">11</div>
+              <div class="defaultBall blackTextBall">12</div>
+              <div class="defaultBall blackTextBall">13</div>
+              <div class="defaultBall blackTextBall">14</div>
+              <div class="defaultBall blackTextBall">15</div>
+              <div class="defaultBall blackTextBall">16</div>
+              <div class="defaultBall blackTextBall">17</div>
+              <div class="defaultBall blackTextBall">18</div>
+              <div class="defaultBall blackTextBall">19</div>
+              <div class="defaultBall blackTextBall">20</div>
+            </div>
+          </div>
         </div>
 
         <!-- 分頁分析區 -->
@@ -212,10 +214,13 @@
     </main>
 
     <footer></footer>
+
+    <a href="#" class="toTop" title="GoTop" style="display: inline;"><span></span></a>
   </div>
 </template>
 
 <script>
+import $ from 'jquery'
 import Chart from 'chart.js'
 
 export default {
@@ -228,7 +233,12 @@ export default {
         { number: '000000002', balls: '01,02,03,04,05,06,07,08,09,10,11,12,13,14,15,16,17,18,19,20', superBall: '05', totalBalls: '210' },
         { number: '000000003', balls: '01,02,03,04,05,06,07,08,09,10,11,12,13,14,15,16,17,18,19,20', superBall: '13', totalBalls: '210' },
         { number: '000000004', balls: '01,02,03,04,05,06,07,08,09,10,11,12,13,14,15,16,17,18,19,20', superBall: '20', totalBalls: '210' },
-        { number: '000000005', balls: '01,02,03,04,05,06,07,08,09,10,11,12,13,14,15,16,17,18,19,20', superBall: '17', totalBalls: '210' }
+        { number: '000000005', balls: '01,02,03,04,05,06,07,08,09,10,11,12,13,14,15,16,17,18,19,20', superBall: '17', totalBalls: '210' },
+        { number: '000000006', balls: '01,02,03,04,05,06,07,08,09,10,11,12,13,14,15,16,17,18,19,20', superBall: '03', totalBalls: '210' },
+        { number: '000000007', balls: '01,02,03,04,05,06,07,08,09,10,41,42,43,44,45,46,47,48,49,50', superBall: '44', totalBalls: '210' },
+        { number: '000000008', balls: '01,02,03,04,05,06,07,08,09,10,11,12,13,14,15,16,17,18,19,20', superBall: '10', totalBalls: '210' },
+        { number: '000000009', balls: '01,02,03,04,05,06,07,08,09,10,11,12,13,14,15,16,17,18,19,20', superBall: '04', totalBalls: '210' },
+        { number: '000000010', balls: '11,12,13,14,15,16,17,18,19,20,31,32,33,34,35,36,37,38,39,40', superBall: '31', totalBalls: '210' }
       ],
       // 冷熱碼列表
       hotBalls: [
@@ -268,63 +278,85 @@ export default {
     }
   },
   mounted () {
-    var ctx2 = document.getElementById('superBallChart')
-    var superBallChart = new Chart(ctx2, {
-      // 屬性表示圖形形狀
-      type: 'line',
-      // 屬性配置圖形上的數據，data裏的數據可以參考各個type的圖每個參數的說明
-      data: {
-        // X軸數值
-        labels: [
-                  '95', '96', '97', '98', '99', '00', '01', '02', '03', '04',
-                  '05', '06', '07', '08', '09', '10', '11', '12', '13', '14',
-                  '15', '16', '17', '18', '19', '20', '21', '22', '23', '24',
-                  '25', '26', '27', '28', '29', '30', '31', '32', '33', '34'
-                ],
-        datasets: [
-          {
-            label: '超級獎號',
-            backgroundColor: '#057eff',
-            borderColor: '#057eff',
-            borderWidth: 3,
-            pointStrokeColor: '#fff',
-            pointStyle: 'crossRot',
-            // 資料內容
-            data: [
-              25, 39, 0, 21, 46, 10, 40, 52, 32, 24, 10, 10,
-              25, 39, 0, 21, 46, 10, 40, 22, 32, 24, 10, 3,
-              25, 39, 77, 21, 46, 10, 50, 22, 32, 24, 10, 1,
-              25, 39, 0, 21, 46, 10, 40, 22, 32, 24, 10, 63
-            ],
-            cubicInterpolationMode: 'monotone',
-            spanGaps: 'false',
-            fill: 'false',
-            radius: 3,
-            pointStyle: 'circle'
-          }
-        ]
-      },
-      // 配置圖形其他的可選項
-      options: {
-        legend: {
-          // 顯示或隱藏圖例
-          display: false,
-          labels: {}
-        },
-        scales: {
-          // Y軸設定
-          yAxes: [
+    this.setChart()
+    this.setGoToTop()
+  },
+  methods: {
+    setChart () {
+      var ctx2 = document.getElementById('superBallChart')
+      var superBallChart = new Chart(ctx2, {
+        // 屬性表示圖形形狀
+        type: 'line',
+        // 屬性配置圖形上的數據，data裏的數據可以參考各個type的圖每個參數的說明
+        data: {
+          // X軸數值
+          labels: [
+                    '95', '96', '97', '98', '99', '00', '01', '02', '03', '04',
+                    '05', '06', '07', '08', '09', '10', '11', '12', '13', '14',
+                    '15', '16', '17', '18', '19', '20', '21', '22', '23', '24',
+                    '25', '26', '27', '28', '29', '30', '31', '32', '33', '34'
+                  ],
+          datasets: [
             {
-              stacked: true,
-              ticks: {
-                suggestedMin: 0,
-                suggestedMax: 80
-              }
+              label: '超級獎號',
+              backgroundColor: '#057eff',
+              borderColor: '#057eff',
+              borderWidth: 3,
+              pointStrokeColor: '#fff',
+              pointStyle: 'crossRot',
+              // 資料內容
+              data: [
+                25, 39, 0, 21, 46, 10, 40, 52, 32, 24, 10, 10,
+                25, 39, 0, 21, 46, 10, 40, 22, 32, 24, 10, 3,
+                25, 39, 77, 21, 46, 10, 50, 22, 32, 24, 10, 1,
+                25, 39, 0, 21, 46, 10, 40, 22, 32, 24, 10, 63
+              ],
+              cubicInterpolationMode: 'monotone',
+              spanGaps: 'false',
+              fill: 'false',
+              radius: 3,
+              pointStyle: 'circle'
             }
           ]
+        },
+        // 配置圖形其他的可選項
+        options: {
+          legend: {
+            // 顯示或隱藏圖例
+            display: false,
+            labels: {}
+          },
+          scales: {
+            // Y軸設定
+            yAxes: [
+              {
+                stacked: true,
+                ticks: {
+                  suggestedMin: 0,
+                  suggestedMax: 80
+                }
+              }
+            ]
+          }
         }
-      }
-    })
+      })
+    },
+    setGoToTop () {
+      // gotop
+      $(window).scroll(function () {
+        if ($(this).scrollTop() > 100) {
+          $('.toTop').fadeIn()
+        } else {
+          $('.toTop').fadeOut()
+        }
+      })
+      $('.toTop').click(function () {
+        $('html, body').animate({
+          scrollTop: 0
+        }, 800)
+        return false
+      })
+    }
   }
 }
 </script>
@@ -430,11 +462,41 @@ export default {
     }
   }
 
+  /* gototop */
+  .toTop span {
+    position: fixed;
+    bottom: 70px;
+    right: 24px;
+    opacity: .9;
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    text-align: center;
+    background: #54a0e5;
+    box-shadow: 1px 1px 4px 0 rgb(2, 46, 93);
+    line-height: 45px;
+    z-index: 9
+  }
+  .toTop span:hover {
+    background: #057eff
+  }
+  .toTop span::before {
+    content: "";
+    position: absolute;
+    left: calc(50% - 7.5px);
+    top: calc(50% - 14px);
+    width: 0;
+    height: 15px;
+    border: 7px solid transparent;
+    border-top: 10px solid #f6f6f6;
+    transform: rotate(180deg)
+  }
+
   /* 共用 */
   // 球號
   .ball {
     .defaultBall {
-      float: left;
+      display: inline-block;
       width: 26px;
       height: 26px;
       margin: 2px 5px 2px 0px;
@@ -488,6 +550,12 @@ export default {
   }
   .table-striped tbody tr:nth-of-type(even){
     background-color: #fbfcfc;
+  }
+
+  @media (max-width:992px) {
+    .predictionInfo .d-flex {
+      display: unset !important;
+    }
   }
 }
 </style>
