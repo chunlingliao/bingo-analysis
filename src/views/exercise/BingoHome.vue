@@ -189,7 +189,9 @@
 
           <!-- 超級獎號走勢 -->
           <div class="tab-pane fade" id="pills-profile" role="tabpanel" aria-labelledby="pills-tab2">
-            .....
+            <div class="mb-3">
+              <canvas id="superBallChart"></canvas>
+            </div>
           </div>
 
           <!-- 冷熱碼 -->
@@ -214,6 +216,8 @@
 </template>
 
 <script>
+import Chart from 'chart.js'
+
 export default {
   name: 'BingoHome',
   data () {
@@ -262,6 +266,62 @@ export default {
         ]
       ]
     }
+  },
+  mounted () {
+    var ctx2 = document.getElementById('superBallChart')
+    var superBallChart = new Chart(ctx2, {
+      // 屬性表示圖形形狀
+      type: 'line',
+      // 屬性配置圖形上的數據，data裏的數據可以參考各個type的圖每個參數的說明
+      data: {
+        // X軸數值
+        labels: [
+                  '95', '96', '97', '98', '99', '00', '01', '02', '03', '04',
+                  '05', '06', '07', '08', '09', '10', '11', '12', '13', '14',
+                  '15', '16', '17', '18', '19', '20', '21', '22', '23', '24',
+                  '25', '26', '27', '28', '29', '30', '31', '32', '33', '34'
+                ],
+        datasets: [
+          {
+            // label: '超級獎號',
+            backgroundColor: '#c7e5ff',
+            borderColor: '#057eff',
+            borderWidth: 3,
+            pointStrokeColor: '#fff',
+            pointStyle: 'crossRot',
+            // 資料內容
+            data: [
+              25, 39, 0, 21, 46, 10, 40, 52, 32, 24, 10, 10,
+              25, 39, 0, 21, 46, 10, 40, 22, 32, 24, 10, 3,
+              25, 39, 77, 21, 46, 10, 50, 22, 32, 24, 10, 1,
+              25, 39, 0, 21, 46, 10, 40, 22, 32, 24, 10, 63
+            ],
+            cubicInterpolationMode: 'monotone',
+            spanGaps: 'false',
+            fill: 'false'
+          }
+        ]
+      },
+      // 配置圖形其他的可選項
+      options: {
+        legend: {
+          // 顯示或隱藏圖例
+          display: false
+        },
+        scales: {
+          // Y軸設定
+          yAxes: [
+            {
+              stacked: true,
+              ticks: {
+                suggestedMin: 0,
+                suggestedMax: 80
+              }
+            }
+          ]
+        }
+      }
+    })
   }
 }
 </script>
