@@ -283,8 +283,8 @@ export default {
                 ],
         datasets: [
           {
-            // label: '超級獎號',
-            backgroundColor: '#c7e5ff',
+            label: '超級獎號',
+            backgroundColor: '#057eff',
             borderColor: '#057eff',
             borderWidth: 3,
             pointStrokeColor: '#fff',
@@ -298,7 +298,9 @@ export default {
             ],
             cubicInterpolationMode: 'monotone',
             spanGaps: 'false',
-            fill: 'false'
+            fill: 'false',
+            radius: 3,
+            pointStyle: 'circle'
           }
         ]
       },
@@ -306,7 +308,8 @@ export default {
       options: {
         legend: {
           // 顯示或隱藏圖例
-          display: false
+          display: false,
+          labels: {}
         },
         scales: {
           // Y軸設定
