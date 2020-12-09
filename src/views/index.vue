@@ -17,69 +17,65 @@
       </div>
       
       <div class="col-sm-5">
-        <div class="font-weight-bold mb-3">第123456789期</div>
-          <ul class="nav mb-1 d-flex justify-content-center">
-            <li class="number-inplay">11</li>
-            <li class="number-inplay">11</li>
-            <li class="number-inplay">11</li>
-            <li class="number-inplay">11</li>
-            <li class="number-inplay">11</li>
-            <li class="number-inplay">11</li>
-            <li class="number-inplay special-number-inplay">11</li>
-            <li class="number-inplay">11</li>
-            <li class="number-inplay">11</li>
-            <li class="number-inplay">11</li>
-          </ul>
-          <ul class="nav d-flex justify-content-center">
-            <li class="number-inplay">11</li>
-            <li class="number-inplay">11</li>
-            <li class="number-inplay">11</li>
-            <li class="number-inplay">11</li>
-            <li class="number-inplay">11</li>
-            <li class="number-inplay">11</li>
-            <li class="number-inplay">11</li>
-            <li class="number-inplay">11</li>
-            <li class="number-inplay">11</li>
-            <li class="number-inplay">11</li>
+        <div class="font-weight-bold mb-3 mt-3 mt-sm-0">第123456789期</div>
+          <ul class="nav number-periods-lottery">
+            <li class="l-bingo-number number-inplay">11</li>
+            <li class="l-bingo-number number-inplay">11</li>
+            <li class="l-bingo-number number-inplay">11</li>
+            <li class="l-bingo-number number-inplay">11</li>
+            <li class="l-bingo-number number-inplay">11</li>
+            <li class="l-bingo-number number-inplay">11</li>
+            <li class="l-bingo-number super-number-inplay">11</li>
+            <li class="l-bingo-number number-inplay">11</li>
+            <li class="l-bingo-number number-inplay">11</li>
+            <li class="l-bingo-number number-inplay">11</li>
+            <li class="l-bingo-number number-inplay">11</li>
+            <li class="l-bingo-number number-inplay">11</li>
+            <li class="l-bingo-number number-inplay">11</li>
+            <li class="l-bingo-number number-inplay">11</li>
+            <li class="l-bingo-number number-inplay">11</li>
+            <li class="l-bingo-number number-inplay">11</li>
+            <li class="l-bingo-number number-inplay">11</li>
+            <li class="l-bingo-number number-inplay">11</li>
+            <li class="l-bingo-number number-inplay">11</li>
+            <li class="l-bingo-number number-inplay">11</li>
           </ul>
       </div>
 
-      <div class="col-sm-2">
+      <div class="col-sm-2 col-6 mt-3 mt-sm-0">
         <div class="font-weight-bold mb-2">超級獎號</div>
-        <div class="Oval">
-          <div class="super-number">45</div>
-        </div>
+        <div class="large-super-number">45</div>
       </div>
-      <div class="col-sm-2">
+      <div class="col-sm-2 col-6 mt-3 mt-sm-0">
         <div class="font-weight-bold mb-3">獎號總和</div>
         <div class="text-primary number-total font-weight-bold">118</div>
       </div>
     </div>
 
     <!-- 第二塊預期總和 -->
-    <div class="lottery-numbers-bg mb-3">
-      <div class="text-left float-left lottery-text font-weight-bold">109067899898期預測總和 小</div>
+    <div class="expected-sum mb-3">
+      <div class="text-left float-left expected-sum-text font-weight-bold">109067899898期預測總和 小</div>
         <ul class="nav">
-          <li class="number-inplay lottery-numbers">11</li>
-          <li class="number-inplay lottery-numbers">11</li>
-          <li class="number-inplay lottery-numbers">11</li>
-          <li class="number-inplay lottery-numbers">11</li>
-          <li class="number-inplay lottery-numbers">11</li>
-          <li class="number-inplay lottery-numbers">11</li>
-          <li class="number-inplay lottery-numbers">11</li>
-          <li class="number-inplay lottery-numbers special-number">11</li>
-          <li class="number-inplay lottery-numbers">11</li>
-          <li class="number-inplay lottery-numbers">11</li>
-          <li class="number-inplay lottery-numbers">11</li>
-          <li class="number-inplay lottery-numbers">11</li>
-          <li class="number-inplay lottery-numbers">11</li>
-          <li class="number-inplay lottery-numbers">11</li>
-          <li class="number-inplay lottery-numbers">11</li>
-          <li class="number-inplay lottery-numbers">11</li>
-          <li class="number-inplay lottery-numbers">11</li>
-          <li class="number-inplay lottery-numbers">11</li>
-          <li class="number-inplay lottery-numbers">11</li>
-          <li class="number-inplay lottery-numbers">11</li>
+          <li class="l-bingo-number">11</li>
+          <li class="l-bingo-number">11</li>
+          <li class="l-bingo-number">11</li>
+          <li class="l-bingo-number">11</li>
+          <li class="l-bingo-number">11</li>
+          <li class="l-bingo-number">11</li>
+          <li class="l-bingo-number">11</li>
+          <li class="l-bingo-number super-number">11</li>
+          <li class="l-bingo-number">11</li>
+          <li class="l-bingo-number">11</li>
+          <li class="l-bingo-number">11</li>
+          <li class="l-bingo-number">11</li>
+          <li class="l-bingo-number">11</li>
+          <li class="l-bingo-number">11</li>
+          <li class="l-bingo-number">11</li>
+          <li class="l-bingo-number">11</li>
+          <li class="l-bingo-number">11</li>
+          <li class="l-bingo-number">11</li>
+          <li class="l-bingo-number">11</li>
+          <li class="l-bingo-number">11</li>
         </ul>
     </div>
 
@@ -99,7 +95,7 @@
       <div class="tab-content" id="pills-tabContent">
         <!-- 歷史開獎紀錄 -->
         <div class="tab-pane fade show active" id="pills-history" role="tabpanel" aria-labelledby="pills-history-tab">
-          <div>
+          <div class="table-responsive">
             <table class="table table-striped">
               <thead>
                 <tr>
@@ -113,99 +109,93 @@
                 <tr>
                   <td class="font-weight-bold period">第111111111期</td>
                   <td>
-                    <ul class="nav mb-1 d-flex justify-content-center">
-                      <li class="number-inplay lottery-numbers">11</li>
-                      <li class="number-inplay lottery-numbers">11</li>
-                      <li class="number-inplay lottery-numbers">11</li>
-                      <li class="number-inplay lottery-numbers">11</li>
-                      <li class="number-inplay lottery-numbers">11</li>
-                      <li class="number-inplay lottery-numbers">11</li>
-                      <li class="number-inplay lottery-numbers special-number-inplay">11</li>
-                      <li class="number-inplay lottery-numbers">11</li>
-                      <li class="number-inplay lottery-numbers">11</li>
-                      <li class="number-inplay lottery-numbers">11</li>
-                    </ul>
-                    <ul class="nav d-flex justify-content-center">
-                      <li class="number-inplay lottery-numbers">11</li>
-                      <li class="number-inplay lottery-numbers">11</li>
-                      <li class="number-inplay lottery-numbers">11</li>
-                      <li class="number-inplay lottery-numbers">11</li>
-                      <li class="number-inplay lottery-numbers">11</li>
-                      <li class="number-inplay lottery-numbers">11</li>
-                      <li class="number-inplay lottery-numbers">11</li>
-                      <li class="number-inplay lottery-numbers">11</li>
-                      <li class="number-inplay lottery-numbers">11</li>
-                      <li class="number-inplay lottery-numbers">11</li>
+                    <ul class="nav d-flex justify-content-center win-number history-lottery">
+                      <li class="l-bingo-number">11</li>
+                      <li class="l-bingo-number">11</li>
+                      <li class="l-bingo-number">11</li>
+                      <li class="l-bingo-number">11</li>
+                      <li class="l-bingo-number">11</li>
+                      <li class="l-bingo-number">11</li>
+                      <li class="l-bingo-number super-number">11</li>
+                      <li class="l-bingo-number">11</li>
+                      <li class="l-bingo-number">11</li>
+                      <li class="l-bingo-number">11</li>
+                      <li class="l-bingo-number">11</li>
+                      <li class="l-bingo-number">11</li>
+                      <li class="l-bingo-number">11</li>
+                      <li class="l-bingo-number">11</li>
+                      <li class="l-bingo-number">11</li>
+                      <li class="l-bingo-number">11</li>
+                      <li class="l-bingo-number">11</li>
+                      <li class="l-bingo-number">11</li>
+                      <li class="l-bingo-number">11</li>
+                      <li class="l-bingo-number">11</li>
                     </ul>
                   </td>
                   <td>
-                    <div class="history-special-number">45</div>
+                    <div class="history-super-number">45</div>
                   </td>
                   <td><div class="history-number-total">118</div></td>
                 </tr>
                 <tr>
                   <td class="font-weight-bold period">第222222222期</td>
                   <td>
-                    <ul class="nav mb-1 d-flex justify-content-center">
-                      <li class="number-inplay lottery-numbers">11</li>
-                      <li class="number-inplay lottery-numbers">11</li>
-                      <li class="number-inplay lottery-numbers">11</li>
-                      <li class="number-inplay lottery-numbers">11</li>
-                      <li class="number-inplay lottery-numbers">11</li>
-                      <li class="number-inplay lottery-numbers">11</li>
-                      <li class="number-inplay lottery-numbers special-number-inplay">11</li>
-                      <li class="number-inplay lottery-numbers">11</li>
-                      <li class="number-inplay lottery-numbers">11</li>
-                      <li class="number-inplay lottery-numbers">11</li>
-                    </ul>
-                    <ul class="nav d-flex justify-content-center">
-                      <li class="number-inplay lottery-numbers">11</li>
-                      <li class="number-inplay lottery-numbers">11</li>
-                      <li class="number-inplay lottery-numbers">11</li>
-                      <li class="number-inplay lottery-numbers">11</li>
-                      <li class="number-inplay lottery-numbers">11</li>
-                      <li class="number-inplay lottery-numbers">11</li>
-                      <li class="number-inplay lottery-numbers">11</li>
-                      <li class="number-inplay lottery-numbers">11</li>
-                      <li class="number-inplay lottery-numbers">11</li>
-                      <li class="number-inplay lottery-numbers">11</li>
+                    <ul class="nav d-flex justify-content-center win-number history-lottery">
+                      <li class="l-bingo-number">11</li>
+                      <li class="l-bingo-number">11</li>
+                      <li class="l-bingo-number">11</li>
+                      <li class="l-bingo-number">11</li>
+                      <li class="l-bingo-number">11</li>
+                      <li class="l-bingo-number">11</li>
+                      <li class="l-bingo-number super-number">11</li>
+                      <li class="l-bingo-number">11</li>
+                      <li class="l-bingo-number">11</li>
+                      <li class="l-bingo-number">11</li>
+                      <li class="l-bingo-number">11</li>
+                      <li class="l-bingo-number">11</li>
+                      <li class="l-bingo-number">11</li>
+                      <li class="l-bingo-number">11</li>
+                      <li class="l-bingo-number">11</li>
+                      <li class="l-bingo-number">11</li>
+                      <li class="l-bingo-number">11</li>
+                      <li class="l-bingo-number">11</li>
+                      <li class="l-bingo-number">11</li>
+                      <li class="l-bingo-number">11</li>
                     </ul>
                   </td>
                   <td>
-                    <div class="history-special-number">45</div>
+                    <div class="history-super-number">45</div>
                   </td>
                   <td><div class="history-number-total">118</div></td>
                 </tr>
                 <tr>
                   <td class="font-weight-bold period">第333333333期</td>
                   <td>
-                    <ul class="nav mb-1 d-flex justify-content-center">
-                      <li class="number-inplay lottery-numbers">11</li>
-                      <li class="number-inplay lottery-numbers">11</li>
-                      <li class="number-inplay lottery-numbers">11</li>
-                      <li class="number-inplay lottery-numbers">11</li>
-                      <li class="number-inplay lottery-numbers">11</li>
-                      <li class="number-inplay lottery-numbers">11</li>
-                      <li class="number-inplay lottery-numbers special-number-inplay">11</li>
-                      <li class="number-inplay lottery-numbers">11</li>
-                      <li class="number-inplay lottery-numbers">11</li>
-                      <li class="number-inplay lottery-numbers">11</li>
-                    </ul>
-                    <ul class="nav d-flex justify-content-center">
-                      <li class="number-inplay lottery-numbers">11</li>
-                      <li class="number-inplay lottery-numbers">11</li>
-                      <li class="number-inplay lottery-numbers">11</li>
-                      <li class="number-inplay lottery-numbers">11</li>
-                      <li class="number-inplay lottery-numbers">11</li>
-                      <li class="number-inplay lottery-numbers">11</li>
-                      <li class="number-inplay lottery-numbers">11</li>
-                      <li class="number-inplay lottery-numbers">11</li>
-                      <li class="number-inplay lottery-numbers">11</li>
-                      <li class="number-inplay lottery-numbers">11</li>
+                    <ul class="nav d-flex justify-content-center win-number history-lottery">
+                      <li class="l-bingo-number">11</li>
+                      <li class="l-bingo-number">11</li>
+                      <li class="l-bingo-number">11</li>
+                      <li class="l-bingo-number">11</li>
+                      <li class="l-bingo-number">11</li>
+                      <li class="l-bingo-number">11</li>
+                      <li class="l-bingo-number super-number">11</li>
+                      <li class="l-bingo-number">11</li>
+                      <li class="l-bingo-number">11</li>
+                      <li class="l-bingo-number">11</li>
+                      <li class="l-bingo-number">11</li>
+                      <li class="l-bingo-number">11</li>
+                      <li class="l-bingo-number">11</li>
+                      <li class="l-bingo-number">11</li>
+                      <li class="l-bingo-number">11</li>
+                      <li class="l-bingo-number">11</li>
+                      <li class="l-bingo-number">11</li>
+                      <li class="l-bingo-number">11</li>
+                      <li class="l-bingo-number">11</li>
+                      <li class="l-bingo-number">11</li>
                     </ul>
                   </td>
                   <td>
-                    <div class="history-special-number">45</div>
+                    <div class="history-super-number">45</div>
                   </td>
                   <td><div class="history-number-total">118</div></td>
                 </tr>
@@ -224,13 +214,15 @@
         </div>
         <!-- 冷熱碼 -->
         <div class="tab-pane fade" id="pills-hot" role="tabpanel" aria-labelledby="pills-hot-tab">
-          <div class="table-responsive-md">
+          <div class="table-responsive">
             <table class="table table-striped">
               <tbody>
                 <tr v-for="(item , i) in hotNumber" :key="i">
                   <td v-for="(number, j) in item" :key="j">
-                    <div class="number-inplay lottery-numbers float-left">{{ number.ball }}</div>
-                    <div class="ball-type">{{ number.type }}次</div>
+                    <div class="hotCold-number">
+                      <div class="l-bingo-number float-left">{{ number.ball }}</div>
+                      <div class="ball-type">{{ number.type }}次</div>
+                    </div>
                   </td>
                 </tr>
               </tbody>

@@ -1,15 +1,38 @@
-/* 公用主色系 */
+/* 共用主色系 */
 .text-primary {
   color: #027eff
 }
 
+/* 共用 */
+.l-bingo-number {
+  display: inline-block;
+  width: 25px;
+  height: 25px;
+  background-color: #ffd196;
+  border-radius: 50%;
+  margin-right: 4px;
+  margin-left: 4px;
+  margin-bottom: 4px;
+  line-height: 25px;
+  color: #151515;
+  font-weight: 500;
+  font-size: 14px;
+}
+
+.history-lottery,
+.number-periods-lottery {
+  width: 338px;
+  margin: 0 auto;
+}
+
 /* 第一塊 */
 .header {
-  background-color: #027eff ;
+  background-color: #027eff;
   color: #ffffff;
   font-size: 18px;
   padding: 8px 0;
 }
+
 .bingo-wrap {
   padding: 16px 0 10px 0;
   border-radius: 4px;
@@ -22,11 +45,15 @@
   background-color: #f0f4f7;
   color: #919aa3;
   margin-right: 10px;
-  
 }
+
 .nav-pills .nav-link.active {
   background-color: #e1efff;
   color: #54a0e5;
+}
+
+.nav-link {
+  padding: 4px 12px;
 }
 
 /* 剩餘時間 */
@@ -38,7 +65,7 @@
   background-color: #919aa3;
   font-size: 36px;
   color: #ffffff;
-  line-height: 60px ;
+  line-height: 60px;
 }
 
 .time-sign {
@@ -48,31 +75,23 @@
 
 /* 期號  */
 .number-inplay {
-  display: inline-block;
-  width: 30px;
-  height: 30px;
   background-color: #ffb14e;
-  border-radius:50%;
-  margin-right:10px;
-  line-height: 30px;
   color: #ffffff;
-  font-weight: 500;
 }
 
-.special-number-inplay{
+.super-number-inplay {
   background-color: #ff4e4e;
+  color: #ffffff;
 }
+
 /* 超級獎號 */
-.Oval {
+.large-super-number{
   width: 86px;
   height: 86px;
   border: solid 5px #dedede;
   border-radius: 50%;
   margin: 0 auto;
   background-image: linear-gradient(to bottom, #ff4e4e 1%, #d70a0a);
-}
-
-.super-number {
   line-height: 80px;
   font-size: 44px;
   color: #ffffff;
@@ -80,30 +99,28 @@
 
 /* 獎號總和 */
 .number-total {
-  font-size: 44px ;
+  font-size: 44px;
 }
 
 /* 預測總和 */
-.lottery-numbers-bg{
+.expected-sum {
   background-color: #ffefef;
-  padding: 14px ;
+  padding: 14px;
+  border-radius: 4px;
 }
-.lottery-text {
+
+.expected-sum-text {
   line-height: 30px;
-  margin-right: 16px;
   color: #ff4e4e;
-  font-size:16px;
+  font-size: 16px;
 }
-.lottery-numbers {
-  background-color: #ffd196;
-  color: #151515;
-}
-.special-number{
+
+.super-number {
   background-color: #ffabab;
 }
 
 /* 歷史開獎紀錄 */
-.table{
+.table {
   border: 1px solid #ebeef1;
 }
 
@@ -115,15 +132,16 @@
   font-weight: 500;
 }
 
-.table td, .table th {
+.table td,
+.table th {
   border-top: 1px solid #ebeef1;
 }
 
-.table-striped tbody tr:nth-of-type(odd){
+.table-striped tbody tr:nth-of-type(odd) {
   background-color: #ffffff;
 }
 
-.table-striped tbody tr:nth-of-type(even){
+.table-striped tbody tr:nth-of-type(even) {
   background-color: #fbfcfc;
 }
 
@@ -131,6 +149,7 @@
 .table-striped td {
   vertical-align: middle;
   text-align: center;
+  white-space: nowrap;
 }
 
 .period {
@@ -139,21 +158,26 @@
   color: #404c56;
 }
 
-.history-special-number {
+.history-super-number {
   width: 56px;
   height: 56px;
   border: solid 3px #dedede;
   border-radius: 50%;
-  margin: 0 auto ;
+  margin: 0 auto;
   background-color: #ffabab;
   line-height: 52px;
   font-size: 26px;
   color: #151515;
 }
-.history-number-total{
+
+.history-number-total {
   font-size: 30px;
   font-weight: 500;
   color: #027eff;
+}
+
+.table thead th {
+  white-space: nowrap;
 }
 
 /* 超級獎號走勢 */
@@ -163,9 +187,17 @@
 
 /* 冷熱碼 */
 
-.ball-type{
+.ball-type {
   line-height: 30px;
   font-weight: 500;
+}
+
+.hotCold-number {
+  width: 68px;
+}
+
+.hotCold-number .number-inplay {
+  margin-top: 2px;
 }
 
 /* gototop */
@@ -198,4 +230,32 @@
   border: 7px solid transparent;
   border-top: 10px solid #f6f6f6;
   transform: rotate(180deg)
+}
+
+@media (max-width:992px) {
+  .expected-sum-text {
+    float: none !important;
+    margin-bottom: 10px;
+    margin-left: 6px;
+  }
+
+  .number-periods-lottery {
+    width: 100%;
+  }
+}
+
+@media (max-width:576px) {
+  .lottery-numbers-bg {
+    padding: 14px 4px;
+  }
+
+  .number-periods-lottery {
+    width: 338px;
+  }
+}
+
+@media (max-width: 320px) {
+  .number-periods-lottery {
+    width: 100%;
+  }
 }
