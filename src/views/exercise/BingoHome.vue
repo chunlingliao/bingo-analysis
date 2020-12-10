@@ -1,9 +1,11 @@
 <template>
   <div class="tinyBingo">
     <header>
-      <nav class="navbar navbar-primary bg-primary text-white">
+      <nav class="header navbar navbar-primary bg-primary text-white">
         <div class="container">
-          賓果賓果輔助系統
+          <div class="webTitle">
+            賓果賓果輔助系統
+          </div>
         </div>
       </nav>
     </header>
@@ -306,6 +308,14 @@ export default {
 
 <style lang="scss" scoped>
 .tinyBingo {
+  // Header
+  .header {
+    padding: 8px 0;
+    .webTitle {
+      font-size: 18px;
+    }
+  }
+
   /* 當前資訊區 */
   .currentInfo {
     padding: 16px 0 10px 0;
