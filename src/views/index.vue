@@ -306,10 +306,10 @@ export default {
     var myChart = new Chart(ctx2, {
         type: "line",
         data: {
-            labels: ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"],
+            labels: ["01", "02", "03", "04", "05", "06", "07", "08", "09", "10", "11", "12", "13", "14", "15", "16", "17", "18", "19", "20"],
             datasets: [
                 {
-                  // label: "超級獎號",
+                  label: "超級獎號:",
                   // backgroundColor: "rgba(225,10,10,0.3)",
                   borderColor: "#057eff",
                   // borderWidth: 1,
