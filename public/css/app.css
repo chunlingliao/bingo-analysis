@@ -25,6 +25,89 @@
   margin: 0 auto;
 }
 
+/* 登入頁 */
+.main {
+  background: url(../images/login.png) center fixed no-repeat;
+  height: 100vh;
+  position: relative;
+}
+
+.login-wrap {
+  width: 354px;
+  top: 50%;
+  left: 50%;
+  transform: translateX(-50%) translateY(-50%);
+  position: absolute;
+}
+
+.login-logo img {
+  width: 82%;
+}
+
+.login-wrap input {
+  width: 284px;
+  height: 38px;
+  float: left;
+}
+
+.ball01 {
+  position: absolute;
+  top: 8%;
+  left: 6%;
+  --animate-duration: 3s;
+}
+
+.ball02 {
+  position: absolute;
+  top: 28%;
+  left: 26%;
+}
+
+.ball03 {
+  position: absolute;
+  top: 8%;
+  right: 32%;
+}
+
+.ball04 {
+  position: absolute;
+  right: 5%;
+  top: 30%;
+  --animate-duration: 3s;
+}
+
+.ball05 {
+  position: absolute;
+  right: 20%;
+  bottom: 30%;
+}
+
+.ball06 {
+  position: absolute;
+  bottom: 5%;
+  right: 6%;
+  --animate-duration: 3s;
+}
+
+.ball07 {
+  position: absolute;
+  bottom: 22%;
+  left: 42%;
+}
+
+.ball08 {
+  position: absolute;
+  bottom: 6%;
+  left: 6%;
+  --animate-duration: 3s;
+}
+
+.ball09 {
+  position: absolute;
+  bottom: 38%;
+  left: 18%;
+}
+
 /* 第一塊 */
 .header {
   background-color: #027eff;
@@ -85,7 +168,7 @@
 }
 
 /* 超級獎號 */
-.large-super-number{
+.large-super-number {
   width: 86px;
   height: 86px;
   border: solid 5px #dedede;
@@ -252,10 +335,74 @@
   .number-periods-lottery {
     width: 338px;
   }
+
+  /* 登入頁 */
+
+  .ball01 {
+    top: 5%;
+    left: 4%;
+  }
+
+  .ball02 {
+    top: 18%;
+    left: 30%;
+  }
+
+  .ball03 {
+    display: none;
+  }
+
+  .ball04 {
+    right: 2%;
+    top: 14%;
+  }
+
+  .ball05 {
+    display: none;
+  }
+
+  .ball06 {
+    bottom: 5%;
+    right: 0;
+  }
+
+  .ball07 {
+    display: none;
+  }
+
+  .ball08 {
+    bottom: 6%;
+    left: 6%;
+  }
+
+  .ball09 {
+    right: 10%;
+    bottom: 16%;
+  }
+
+  .ball01 img,
+  .ball06 img,
+  .ball04 img,
+  .ball08 img {
+    width: 60%;
+  }
+
+  .ball09 img {
+    width: 18%;
+  }
 }
 
 @media (max-width: 320px) {
   .number-periods-lottery {
     width: 100%;
+  }
+
+  .login-wrap {
+    width: 320px;
+  }
+
+  .login-wrap input {
+    width: 228px;
+    margin-left: 12px;
   }
 }
