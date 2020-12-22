@@ -19,7 +19,8 @@
       <div class="col-sm-5">
         <div class="font-weight-bold mb-3 mt-3 mt-sm-0">第{{ history[0].draw_number }}期</div>
           <ul class="nav number-periods-lottery">
-            <li v-for="balls in history[0].balls" :key="balls" class="l-bingo-number number-inplay">{{ balls }}</li>
+            <li v-for="balls in history[0].balls" :key="balls" 
+            :class="['l-bingo-number number-inplay',{'super-number-inplay': Number(history[0].super_ball) === Number(balls)}]">{{ balls }}</li>
             <!-- <li class="l-bingo-number number-inplay">11</li>
             <li class="l-bingo-number number-inplay">11</li>
             <li class="l-bingo-number number-inplay">11</li>
@@ -96,31 +97,13 @@
                 </tr>
               </thead>
               <tbody>
-                <tr v-for="item in history" :key="item">
+                <tr v-for="(item, i) in history" :key="i">
                   <td class="font-weight-bold period">
                     第{{ item.draw_number }}期</td>
                   <td>
                     <ul class="nav d-flex justify-content-center win-number history-lottery">
-                      <li :class="['l-bingo-number',{'super-number': Number(item.super_ball) === Number(item.balls[0])}]">{{ item.balls[0] }}</li>
-                      <li :class="['l-bingo-number',{'super-number': Number(item.super_ball) === Number(item.balls[1])}]">{{ item.balls[1] }}</li>
-                      <li :class="['l-bingo-number',{'super-number': Number(item.super_ball) === Number(item.balls[2])}]">{{ item.balls[2] }}</li>
-                      <li :class="['l-bingo-number',{'super-number': Number(item.super_ball) === Number(item.balls[3])}]">{{ item.balls[3] }}</li>
-                      <li :class="['l-bingo-number',{'super-number': Number(item.super_ball) === Number(item.balls[4])}]">{{ item.balls[4] }}</li>
-                      <li :class="['l-bingo-number',{'super-number': Number(item.super_ball) === Number(item.balls[5])}]">{{ item.balls[5] }}</li>
-                      <li :class="['l-bingo-number',{'super-number': Number(item.super_ball) === Number(item.balls[6])}]">{{ item.balls[6] }}</li>
-                      <li :class="['l-bingo-number',{'super-number': Number(item.super_ball) === Number(item.balls[7])}]">{{ item.balls[7] }}</li>
-                      <li :class="['l-bingo-number',{'super-number': Number(item.super_ball) === Number(item.balls[8])}]">{{ item.balls[8] }}</li>
-                      <li :class="['l-bingo-number',{'super-number': Number(item.super_ball) === Number(item.balls[9])}]">{{ item.balls[9] }}</li>
-                      <li :class="['l-bingo-number',{'super-number': Number(item.super_ball) === Number(item.balls[10])}]">{{ item.balls[10] }}</li>
-                      <li :class="['l-bingo-number',{'super-number': Number(item.super_ball) === Number(item.balls[11])}]">{{ item.balls[11] }}</li>
-                      <li :class="['l-bingo-number',{'super-number': Number(item.super_ball) === Number(item.balls[12])}]">{{ item.balls[12] }}</li>
-                      <li :class="['l-bingo-number',{'super-number': Number(item.super_ball) === Number(item.balls[13])}]">{{ item.balls[13] }}</li>
-                      <li :class="['l-bingo-number',{'super-number': Number(item.super_ball) === Number(item.balls[14])}]">{{ item.balls[14] }}</li>
-                      <li :class="['l-bingo-number',{'super-number': Number(item.super_ball) === Number(item.balls[15])}]">{{ item.balls[15] }}</li>
-                      <li :class="['l-bingo-number',{'super-number': Number(item.super_ball) === Number(item.balls[16])}]">{{ item.balls[16] }}</li>
-                      <li :class="['l-bingo-number',{'super-number': Number(item.super_ball) === Number(item.balls[17])}]">{{ item.balls[17] }}</li>
-                      <li :class="['l-bingo-number',{'super-number': Number(item.super_ball) === Number(item.balls[18])}]">{{ item.balls[18] }}</li>
-                      <li :class="['l-bingo-number',{'super-number': Number(item.super_ball) === Number(item.balls[19])}]">{{ item.balls[19] }}</li>
+                      <li v-for="balls in item.balls" :key="balls"
+                        :class="['l-bingo-number',{'super-number': Number(item.super_ball) === Number(balls)}]">{{ balls }}</li>
                       <!-- <li class="l-bingo-number super-number">11</li> -->
                     </ul>
                   </td>
@@ -208,8 +191,68 @@ export default {
           "game_time": "Wed, 09 Dec 2020 17:10:00 GMT",
           "super_ball": "78",
           "total_number": "555"
+        },
+        {
+          "balls": [1, 3, 8, 12, 17, 19, 20, 31, 33, 34, 38, 43, 45, 47, 48, 63, 68, 69, 71, 78],
+          "draw_number": "109069754",
+          "game_time": "Wed, 09 Dec 2020 17:10:00 GMT",
+          "super_ball": "8",
+          "total_number": "555"
+        },
+        {
+          "balls": [1, 3, 7, 12, 17, 19, 20, 31, 33, 34, 38, 43, 45, 47, 48, 66, 68, 69, 71, 78],
+          "draw_number": "109069755",
+          "game_time": "Wed, 09 Dec 2020 17:10:00 GMT",
+          "super_ball": "66",
+          "total_number": "555"
+        },
+        {
+          "balls": [1, 3, 9, 12, 17, 19, 20, 31, 33, 34, 38, 43, 45, 47, 48, 63, 68, 69, 71, 78],
+          "draw_number": "109069756",
+          "game_time": "Wed, 09 Dec 2020 17:10:00 GMT",
+          "super_ball": "9",
+          "total_number": "555"
+        },
+        {
+          "balls": [1, 3, 7, 12, 17, 19, 20, 31, 33, 34, 38, 43, 45, 47, 48, 63, 68, 69, 71, 78],
+          "draw_number": "109069757",
+          "game_time": "Wed, 09 Dec 2020 17:10:00 GMT",
+          "super_ball": "45",
+          "total_number": "555"
+        },
+        {
+          "balls": [1, 3, 7, 12, 17, 19, 20, 31, 33, 34, 38, 43, 45, 47, 48, 62, 68, 69, 71, 78],
+          "draw_number": "109069758",
+          "game_time": "Wed, 09 Dec 2020 17:10:00 GMT",
+          "super_ball": "62",
+          "total_number": "555"
+        },
+        {
+          "balls": [1, 3, 7, 12, 17, 19, 20, 31, 33, 34, 38, 43, 44, 47, 48, 63, 68, 69, 71, 78],
+          "draw_number": "109069759",
+          "game_time": "Wed, 09 Dec 2020 17:10:00 GMT",
+          "super_ball": "44",
+          "total_number": "555"
+        },
+        {
+          "balls": [1, 3, 7, 12, 17, 19, 20, 31, 33, 34, 38, 43, 45, 47, 58, 63, 68, 69, 71, 78],
+          "draw_number": "109069760",
+          "game_time": "Wed, 09 Dec 2020 17:10:00 GMT",
+          "super_ball": "58",
+          "total_number": "555"
         }
       ],
+      hotNumber2:
+      {
+        "1": 5,
+        "2": 9,
+        "3": 10,
+        "4": 10,
+        "5": 5,
+        "6": 9,
+        "7": 10,
+        "8": 10
+      },
       hotNumber:[
         [{ ball:'01', type:'10'},{ ball:'01', type:'10'},{ ball:'01', type:'10'},
         { ball:'01', type:'10'},{ ball:'01', type:'10'},{ ball:'01', type:'10'},
@@ -235,7 +278,9 @@ export default {
         [{ ball:'08', type:'20'},{ ball:'01', type:'10'},{ ball:'01', type:'10'},
         { ball:'01', type:'10'},{ ball:'01', type:'10'},{ ball:'01', type:'10'},
         { ball:'01', type:'10'},{ ball:'01', type:'10'},{ ball:'01', type:'10'},{ ball:'01', type:'10'}]
-      ]
+      ],
+      chartLabels: [],
+      chartSuperBalls: []
     };
   },
   components: {
@@ -264,13 +309,24 @@ export default {
   mounted: function() {
     //元素已掛載， $el 被建立。
     console.log(window.customElements)
+
+    // for (let i = 0; i <= 39; i++) {
+    var Len = this.history.length <= 40 ? this.history.length : 40
+    console.log('Len:', Len)
+    for (let i = 0; i < Len; i++) {
+      // console.log(i)
+      console.log('draw_number:', i, this.history[i].draw_number, this.history[i].draw_number.slice(-2))
+      this.chartLabels.push(this.history[i].draw_number.slice(-2))
+      this.chartSuperBalls.push(this.history[i].super_ball)
+    }
     
     var ctx2 = document.getElementById("myChart");
 
     var myChart = new Chart(ctx2, {
         type: "line",
         data: {
-            labels: ["01", "02", "03", "04", "05", "06", "07", "08", "09", "10", "11", "12", "13", "14", "15", "16", "17", "18", "19", "20"],
+            // labels: ["01", "02", "03", "04", "05", "06", "07", "08", "09", "10", "11", "12", "13", "14", "15", "16", "17", "18", "19", "20"],
+            labels: this.chartLabels,
             datasets: [
                 {
                   label: "超級獎號:",
@@ -279,7 +335,8 @@ export default {
                   // borderWidth: 1,
                   // pointStrokeColor: "#fff",
                   // pointStyle: "crossRot",
-                  data: [65, 59, 0, 51, 56, 10, 40, 22, 32, 54, 10, 30],
+                  // data: [65, 59, 0, 51, 56, 10, 40, 22, 32, 54, 10, 30],
+                  data: this.chartSuperBalls,
                   cubicInterpolationMode: "monotone",
                   spanGaps: "false",
                   fill: "false"
@@ -300,6 +357,11 @@ export default {
           }
       }
     });
+
+    // for(item in history){
+
+    // }
+
 
     //gotop
     $(window).scroll(function () {
