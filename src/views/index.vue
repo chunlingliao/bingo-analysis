@@ -17,65 +17,29 @@
       </div>
       
       <div class="col-sm-5">
-        <div class="font-weight-bold mb-3 mt-3 mt-sm-0">第123456789期</div>
+        <div class="font-weight-bold mb-3 mt-3 mt-sm-0">第{{ draw_number }}期</div>
           <ul class="nav number-periods-lottery">
-            <li class="l-bingo-number number-inplay">11</li>
-            <li class="l-bingo-number number-inplay">11</li>
-            <li class="l-bingo-number number-inplay">11</li>
-            <li class="l-bingo-number number-inplay">11</li>
-            <li class="l-bingo-number number-inplay">11</li>
-            <li class="l-bingo-number number-inplay">11</li>
-            <li class="l-bingo-number super-number-inplay">11</li>
-            <li class="l-bingo-number number-inplay">11</li>
-            <li class="l-bingo-number number-inplay">11</li>
-            <li class="l-bingo-number number-inplay">11</li>
-            <li class="l-bingo-number number-inplay">11</li>
-            <li class="l-bingo-number number-inplay">11</li>
-            <li class="l-bingo-number number-inplay">11</li>
-            <li class="l-bingo-number number-inplay">11</li>
-            <li class="l-bingo-number number-inplay">11</li>
-            <li class="l-bingo-number number-inplay">11</li>
-            <li class="l-bingo-number number-inplay">11</li>
-            <li class="l-bingo-number number-inplay">11</li>
-            <li class="l-bingo-number number-inplay">11</li>
-            <li class="l-bingo-number number-inplay">11</li>
+            <li class="l-bingo-number number-inplay" v-for="i in balls" :key="i">{{ i }}</li>
+            <!-- <li class="l-bingo-number super-number-inplay">11</li> -->
           </ul>
       </div>
 
       <div class="col-sm-2 col-6 mt-3 mt-sm-0">
         <div class="font-weight-bold mb-2">超級獎號</div>
-        <div class="large-super-number">45</div>
+        <div class="large-super-number">{{ super_ball }}</div>
       </div>
       <div class="col-sm-2 col-6 mt-3 mt-sm-0">
         <div class="font-weight-bold mb-3">獎號總和</div>
-        <div class="text-primary number-total font-weight-bold">118</div>
+        <div class="text-primary number-total font-weight-bold">{{ total_number }}</div>
       </div>
     </div>
 
     <!-- 第二塊預期總和 -->
     <div class="expected-sum mb-3">
-      <div class="text-left float-left expected-sum-text font-weight-bold">109067899898期預測總和 小</div>
+      <div class="text-left float-left expected-sum-text font-weight-bold">{{ draw_number }}期預測總和 小</div>
         <ul class="nav">
-          <li class="l-bingo-number">11</li>
-          <li class="l-bingo-number">11</li>
-          <li class="l-bingo-number">11</li>
-          <li class="l-bingo-number">11</li>
-          <li class="l-bingo-number">11</li>
-          <li class="l-bingo-number">11</li>
-          <li class="l-bingo-number">11</li>
-          <li class="l-bingo-number super-number">11</li>
-          <li class="l-bingo-number">11</li>
-          <li class="l-bingo-number">11</li>
-          <li class="l-bingo-number">11</li>
-          <li class="l-bingo-number">11</li>
-          <li class="l-bingo-number">11</li>
-          <li class="l-bingo-number">11</li>
-          <li class="l-bingo-number">11</li>
-          <li class="l-bingo-number">11</li>
-          <li class="l-bingo-number">11</li>
-          <li class="l-bingo-number">11</li>
-          <li class="l-bingo-number">11</li>
-          <li class="l-bingo-number">11</li>
+          <li class="l-bingo-number" v-for="i in balls" :key="i">{{ i }}</li>
+          <!-- <li class="l-bingo-number super-number">11</li> -->
         </ul>
     </div>
 
@@ -106,98 +70,20 @@
                 </tr>
               </thead>
               <tbody>
-                <tr>
-                  <td class="font-weight-bold period">第111111111期</td>
+                <tr v-for="(item, i) in historyTable" :key="i">
+                  <td class="font-weight-bold period">第{{ item.draw_number }}期</td>
                   <td>
                     <ul class="nav d-flex justify-content-center win-number history-lottery">
-                      <li class="l-bingo-number">11</li>
-                      <li class="l-bingo-number">11</li>
-                      <li class="l-bingo-number">11</li>
-                      <li class="l-bingo-number">11</li>
-                      <li class="l-bingo-number">11</li>
-                      <li class="l-bingo-number">11</li>
-                      <li class="l-bingo-number super-number">11</li>
-                      <li class="l-bingo-number">11</li>
-                      <li class="l-bingo-number">11</li>
-                      <li class="l-bingo-number">11</li>
-                      <li class="l-bingo-number">11</li>
-                      <li class="l-bingo-number">11</li>
-                      <li class="l-bingo-number">11</li>
-                      <li class="l-bingo-number">11</li>
-                      <li class="l-bingo-number">11</li>
-                      <li class="l-bingo-number">11</li>
-                      <li class="l-bingo-number">11</li>
-                      <li class="l-bingo-number">11</li>
-                      <li class="l-bingo-number">11</li>
-                      <li class="l-bingo-number">11</li>
+                      <li class="l-bingo-number"  
+                      v-for="balls in item.balls" :key="balls">{{ balls }}</li>
+                      <!-- <li class="l-bingo-number super-number">11</li> -->
                     </ul>
                   </td>
                   <td>
-                    <div class="history-super-number">45</div>
+                    <div class="history-super-number">{{ item.super_ball }}</div>
                   </td>
-                  <td><div class="history-number-total">118</div></td>
-                </tr>
-                <tr>
-                  <td class="font-weight-bold period">第222222222期</td>
-                  <td>
-                    <ul class="nav d-flex justify-content-center win-number history-lottery">
-                      <li class="l-bingo-number">11</li>
-                      <li class="l-bingo-number">11</li>
-                      <li class="l-bingo-number">11</li>
-                      <li class="l-bingo-number">11</li>
-                      <li class="l-bingo-number">11</li>
-                      <li class="l-bingo-number">11</li>
-                      <li class="l-bingo-number super-number">11</li>
-                      <li class="l-bingo-number">11</li>
-                      <li class="l-bingo-number">11</li>
-                      <li class="l-bingo-number">11</li>
-                      <li class="l-bingo-number">11</li>
-                      <li class="l-bingo-number">11</li>
-                      <li class="l-bingo-number">11</li>
-                      <li class="l-bingo-number">11</li>
-                      <li class="l-bingo-number">11</li>
-                      <li class="l-bingo-number">11</li>
-                      <li class="l-bingo-number">11</li>
-                      <li class="l-bingo-number">11</li>
-                      <li class="l-bingo-number">11</li>
-                      <li class="l-bingo-number">11</li>
-                    </ul>
-                  </td>
-                  <td>
-                    <div class="history-super-number">45</div>
-                  </td>
-                  <td><div class="history-number-total">118</div></td>
-                </tr>
-                <tr>
-                  <td class="font-weight-bold period">第333333333期</td>
-                  <td>
-                    <ul class="nav d-flex justify-content-center win-number history-lottery">
-                      <li class="l-bingo-number">11</li>
-                      <li class="l-bingo-number">11</li>
-                      <li class="l-bingo-number">11</li>
-                      <li class="l-bingo-number">11</li>
-                      <li class="l-bingo-number">11</li>
-                      <li class="l-bingo-number">11</li>
-                      <li class="l-bingo-number super-number">11</li>
-                      <li class="l-bingo-number">11</li>
-                      <li class="l-bingo-number">11</li>
-                      <li class="l-bingo-number">11</li>
-                      <li class="l-bingo-number">11</li>
-                      <li class="l-bingo-number">11</li>
-                      <li class="l-bingo-number">11</li>
-                      <li class="l-bingo-number">11</li>
-                      <li class="l-bingo-number">11</li>
-                      <li class="l-bingo-number">11</li>
-                      <li class="l-bingo-number">11</li>
-                      <li class="l-bingo-number">11</li>
-                      <li class="l-bingo-number">11</li>
-                      <li class="l-bingo-number">11</li>
-                    </ul>
-                  </td>
-                  <td>
-                    <div class="history-super-number">45</div>
-                  </td>
-                  <td><div class="history-number-total">118</div></td>
+                  <td><div class="history-number-total">{{ item.total_number }}</div></td>
+                  
                 </tr>
               </tbody>
             </table>
@@ -246,6 +132,34 @@ export default {
   data: function() {
     // 資料
     return {
+      // ## history/post & get
+      balls: [1, 3, 7, 12, 17, 19, 20, 31, 33, 34, 38, 43, 45, 47, 48, 63, 68, 69, 71, 78],
+      draw_number: "109069751",
+      game_time: "Wed, 09 Dec 2020 17:10:00 GMT",
+      super_ball: "20",
+      total_number: "747",
+      // ## predict/get
+      balls: [1, 3, 7, 12, 17, 19, 20, 31, 33, 34, 38, 43, 45, 47, 48, 63, 68, 69, 71, 78],
+      draw_number: "109069751",
+      total_number: "747",
+
+      historyTable:[{
+        balls: [1, 3, 7, 12, 17, 19, 20, 31, 33, 34, 38, 43, 45, 47, 48, 63, 68, 69, 71, 78],
+        draw_number: "109069751",
+        game_time: "Wed, 09 Dec 2020 17:10:00 GMT",
+        super_ball: "20",
+        total_number: "747",
+      },
+      {
+        balls: [2, 3, 7, 12, 17, 19, 20, 31, 33, 34, 38, 43, 45, 47, 48, 63, 68, 69, 71, 78],
+        draw_number: "109069752",
+        game_time: "Wed, 09 Dec 2020 17:10:00 GMT",
+        super_ball: "30",
+        total_number: "800",
+      },
+      ],
+
+      
       hotNumber:[
         [{ ball:'01', type:'10'},{ ball:'01', type:'10'},{ ball:'01', type:'10'},
         { ball:'01', type:'10'},{ ball:'01', type:'10'},{ ball:'01', type:'10'},
@@ -285,6 +199,7 @@ export default {
   },
   methods: {
     // 初始
+    
   },
   //BEGIN--生命週期
   beforeCreate: function() {
@@ -336,6 +251,9 @@ export default {
           }
       }
     });
+
+      // var newStr = JSON.stringify(historyTable)
+      // console.log(newStr)
 
     //gotop
     $(window).scroll(function () {
