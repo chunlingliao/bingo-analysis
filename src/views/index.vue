@@ -1,7 +1,19 @@
 <template>
 <div>
   <div class="text-left header">
-    <div class="container">賓果賓果輔助系統</div>
+    <div class="container">
+    <div class="row">
+        <div class="col-6 bingo-title">
+          賓果賓果輔助系統
+        </div>
+        <div class="col-6">
+          <div class="float-right">
+            <router-link to="/admin" class="badge badge-light p-2 mr-2" v-if="checkSuperUser">進入後台</router-link>
+            <router-link to="/login" class="badge badge-light p-2" @click="logout">登出</router-link>
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
   <div class="container">
     <div class="text-left text-primary mt-3 mb-3">賓果賓果</div>
@@ -280,7 +292,8 @@ export default {
         { ball:'01', type:'10'},{ ball:'01', type:'10'},{ ball:'01', type:'10'},{ ball:'01', type:'10'}]
       ],
       chartLabels: [],
-      chartSuperBalls: []
+      chartSuperBalls: [],
+      checkSuperUser: false
     };
   },
   components: {
@@ -309,6 +322,8 @@ export default {
   mounted: function() {
     //元素已掛載， $el 被建立。
     console.log(window.customElements)
+
+    this.checkSuperUser = localStorage.getItem('login')
 
     // for (let i = 0; i <= 39; i++) {
     var Len = this.history.length <= 40 ? this.history.length : 40

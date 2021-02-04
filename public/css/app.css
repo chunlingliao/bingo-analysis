@@ -17,6 +17,7 @@
   color: #151515;
   font-weight: 500;
   font-size: 14px;
+  text-align: center;
 }
 
 .history-lottery,
@@ -44,10 +45,14 @@
   width: 82%;
 }
 
+.input-region {
+  width: 284px !important;
+  margin: 0 auto;
+}
+
 .login-wrap input {
-  width: 284px;
+  width: 100% !important;
   height: 38px;
-  float: left;
 }
 
 .ball01 {
@@ -91,7 +96,7 @@
 
 .ball07 {
   position: absolute;
-  bottom: 22%;
+  bottom: 12%;
   left: 42%;
 }
 
@@ -120,6 +125,11 @@
   padding: 16px 0 10px 0;
   border-radius: 4px;
   background-color: #f6f9fa;
+  text-align: center;
+}
+
+.bingo-title {
+  padding-right: 0;
 }
 
 /* 導覽列 */
@@ -205,6 +215,7 @@
 /* 歷史開獎紀錄 */
 .table {
   border: 1px solid #ebeef1;
+  text-align: center;
 }
 
 .table thead th {
@@ -315,6 +326,7 @@
   transform: rotate(180deg)
 }
 
+/* RWD */
 @media (max-width:992px) {
   .expected-sum-text {
     float: none !important;
@@ -336,15 +348,13 @@
     width: 338px;
   }
 
-  /* 登入頁 */
-
   .ball01 {
     top: 5%;
     left: 4%;
   }
 
   .ball02 {
-    top: 18%;
+    top: 16%;
     left: 30%;
   }
 
@@ -363,7 +373,7 @@
 
   .ball06 {
     bottom: 5%;
-    right: 0;
+    left: 72%;
   }
 
   .ball07 {
@@ -371,25 +381,23 @@
   }
 
   .ball08 {
-    bottom: 6%;
+    bottom: 2%;
     left: 6%;
   }
 
   .ball09 {
-    right: 10%;
-    bottom: 16%;
+    left: 32%;
+    bottom: 13%;
   }
 
   .ball01 img,
   .ball06 img,
   .ball04 img,
-  .ball08 img {
-    width: 60%;
+  .ball08 img,
+  .ball09 img {
+    width: 52%;
   }
 
-  .ball09 img {
-    width: 18%;
-  }
 }
 
 @media (max-width: 320px) {
@@ -400,9 +408,99 @@
   .login-wrap {
     width: 320px;
   }
+}
 
-  .login-wrap input {
-    width: 228px;
-    margin-left: 12px;
-  }
+/* loading 動態圖 */
+.loading {
+  width: 354px;
+  top: 50%;
+  left: 50%;
+  transform: translateX(-50%) translateY(-50%);
+  position: absolute;
+}
+
+/* 重新整理圖示 */
+.refresh .fa-sync-alt {
+  cursor: pointer;
+}
+/* 重新整理圖示轉動 */
+.refresh .fa-spin {
+  animation: fa-spin 2s infinite linear;
+}
+
+
+
+/* 後台 */
+/* 賓果後台 */
+.header {
+  background-color: #027eff;
+  color: #ffffff;
+  font-size: 18px;
+  padding: 8px 0;
+}
+
+input,
+.filterSelect {
+  width: 120px !important;
+}
+
+.form-group {
+  margin-bottom: 0;
+}
+
+.tip {
+  font-size: 12px;
+}
+
+/* icon 樣式 */
+.fa-times-circle {
+  color: #adadad;
+  font-size: 20px;
+}
+
+.fa-check-circle {
+  color: #00be4a;
+  font-size: 20px;
+}
+
+.fa-trash {
+  color: #adadad;
+  font-size: 20px;
+}
+
+/* 表格 */
+.table {
+  border: 2px solid #ebeef1;
+}
+
+/* gototop */
+.toTop span {
+  position: fixed;
+  bottom: 70px;
+  right: 24px;
+  opacity: .9;
+  height: 50px;
+  width: 50px;
+  border-radius: 50%;
+  text-align: center;
+  background: #54a0e5;
+  box-shadow: 1px 1px 4px 0 rgb(2, 46, 93);
+  line-height: 45px;
+  z-index: 9
+}
+
+.toTop span:hover {
+  background: #057eff
+}
+
+.toTop span::before {
+  content: "";
+  position: absolute;
+  left: calc(50% - 7.5px);
+  top: calc(50% - 14px);
+  width: 0;
+  height: 15px;
+  border: 7px solid transparent;
+  border-top: 10px solid #f6f6f6;
+  transform: rotate(180deg)
 }
