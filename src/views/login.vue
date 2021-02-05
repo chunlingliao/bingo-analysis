@@ -67,10 +67,10 @@ export default {
           this.$toastr.error('尚未輸入帳號')
           return
         }
-        if (this.serialNumber ==='' && this.serialNumber !=='qwert16888' ) {
+        if (this.serialNumber !=='qwert16888' ) {
           // 錯誤訊息
           console.log(this.serialNumber)
-          this.$toastr.error(`${this.serialNumber} 登入失敗！請重新登入`)
+          this.$toastr.error('登入失敗！請重新登入')
         } else if (this.serialNumber ==='qwert16888') { 
           // success
           this.$toastr.success(`${this.serialNumber} 登入成功`)
