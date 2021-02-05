@@ -4,7 +4,7 @@
     <div class="container">
       <div class="row">
         <div class="col-6 bingo-title">
-          賓果後台管理系統
+          <b>BINGO後台管理系統</b>
         </div>
         <div class="col-6">
           <div class="float-right">

@@ -4,7 +4,7 @@
     <div class="container">
     <div class="row">
         <div class="col-6 bingo-title">
-          賓果賓果輔助系統
+          <b>BINGO</b>
         </div>
         <div class="col-6">
           <div class="float-right">
@@ -16,7 +16,6 @@
     </div>
   </div>
   <div class="container">
-    <div class="text-left text-primary mt-3 mb-3">賓果賓果</div>
     <!-- 第一塊 -->
     <div class="row bingo-wrap no-gutters mt-3 mb-3">
       <div class="col-sm-3">
