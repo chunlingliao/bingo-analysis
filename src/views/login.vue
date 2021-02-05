@@ -2,14 +2,14 @@
     <div>
         <div class="main">
             <div class="login-wrap">
-                <div class="login-logo mb-3 text-center"><img src="images/login-logo.png" alt=""></div>
+                <div class="login-logo mb-3 text-center"><img src="images/login-logo2.png" alt=""></div>
                 <div class="input-region">
                   <input class="form-control form-control-sm" type="text" placeholder="請輸入序號" v-model="serialNumber">
                   <button class="btn btn-primary w-100 mt-3" type="button" disabled v-if="loadingStatus">
                     <span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span>
                     <span class="sr-only">Loading...</span>
                   </button>
-                  <button class="btn btn-primary w-100 mt-3" type="button" @click="login" v-else>登入</button>
+                  <button class="btn btn-login w-100 mt-3" type="button" @click="login" v-else>登入</button>
                 </div>
             </div>
             <div class="ball01 animate__animated animate__zoomIn "><img src="images/ball01.png" alt=""></div>

@@ -45,6 +45,16 @@
   width: 82%;
 }
 
+.btn-login {
+  background-color: #fca027;
+  color: #ffffff;
+}
+
+.btn-login:hover {
+  background-color: #fb930b;
+  color: #ffffff;
+}
+
 .input-region {
   width: 284px !important;
   margin: 0 auto;
