@@ -73,7 +73,7 @@
 
             <td>
               <!-- Button trigger modal -->
-              <div data-toggle="modal" data-target="#deleteModal" @click="getToken(item.token)"><i class="fas fa-trash"></i></div>
+              <div data-toggle="modal" data-target="#deleteModal" @click="getToken(i)"><i class="fas fa-trash"></i></div>
             </td>
           </tr>
         </tbody>
@@ -90,7 +90,7 @@
               </button>
             </div>
             <div class="modal-body">
-              您確定要刪除序號嗎？{{ deleteToken }}
+              您確定要刪除序號嗎？
             </div>
             <div class="modal-footer">
               <button type="button" class="btn btn-secondary" data-dismiss="modal">取消</button>
@@ -128,11 +128,18 @@ export default {
         { text: '未使用', value: 'not_used' }
       ],
 
-      search:[],
+      search:[
+        { created_at:'2021-01-01', end_at:'2021-02-02', token:'123', used: true },
+        { created_at:'2021-01-01', end_at:'2021-02-02', token:'456', used: true },
+        { created_at:'2021-01-01', end_at:'2021-02-02', token:'789', used: true },
+        { created_at:'2021-01-01', end_at:'2021-02-02', token:'9999', used: false },
+        { created_at:'2021-01-01', end_at:'2021-02-02', token:'asdf', used: false }
+      ],
+      searchOri: [],
       num:'',
-      token:'',
+      // token:'',
       deleteToken: '',
-      su_token: localStorage.getItem('su_token')
+      // su_token: localStorage.getItem('su_token')
     };
   },
   components: {
@@ -142,7 +149,21 @@ export default {
     //監聽值
     // 切換列表選擇
     'selected' (value) {
-      this.getSearchList()
+      let items = []
+      if (value === 'used') {
+        for (let item in this.searchOri) {
+          if (this.searchOri[item].used) items.push(this.searchOri[item])
+        }
+      } else if (value === 'not_used') {
+        for (let item in this.searchOri) {
+          if (!this.searchOri[item].used) items.push(this.searchOri[item])
+        }
+      } else if (value === 'all') {
+        for (let item in this.searchOri) {
+          items.push(this.searchOri[item])
+        }
+      }
+      this.search = items
     }
   },
   computed: {
@@ -211,6 +232,11 @@ export default {
     //   this.deleteToken = value
     // },
 
+    getToken (value) {
+      console.log('>>',value)
+      this.deleteToken = value
+    },
+
     // logout () {
     //   // 登出清除使用者資訊
     //   axios.get(process.env.VUE_APP_API_URL + "/su_logout").then(res => {
@@ -218,6 +244,23 @@ export default {
     //     localStorage.clear()
     //   });
     // }
+    insert() {
+      for(let i = 0; i <  this.num; i++){
+        this.search.push({ created_at:'2021-01-01', end_at:'2021-02-02', token:`123-${i}`, used: false })
+      }
+      this.searchOri = this.search
+    },
+
+    deleteList () {
+      console.log('this.deleteToken:',this.deleteToken)
+        this.search.splice(this.deleteToken, 1)
+        $('#deleteModal').modal('hide')
+        this.$toastr.success('刪除成功')
+    },
+    logout () {
+      // 登出清除使用者資訊
+        localStorage.clear()
+    }
   },
   //BEGIN--生命週期
   beforeCreate: function() {
@@ -233,7 +276,8 @@ export default {
   mounted: function() {
     //元素已掛載， $el 被建立。
     // console.log(window.customElements)
-    this.getSearchList()
+    // this.getSearchList()
+    this.searchOri = this.search
 
     //gotop
     $(window).scroll(function () {

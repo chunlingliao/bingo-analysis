@@ -307,6 +307,10 @@ export default {
   },
   methods: {
     // 初始
+    logout () {
+      // 登出清除使用者資訊
+        localStorage.clear()
+    }
   },
   //BEGIN--生命週期
   beforeCreate: function() {
