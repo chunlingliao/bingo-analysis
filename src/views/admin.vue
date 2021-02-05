@@ -28,7 +28,7 @@
             {{ option.text }}
           </option>
       </select>
-      <button type="button" class="btn btn-info float-right" @click="download()">下載</button>
+      <button type="button" class="btn btn-info float-right downloadBtn">下載</button>
     </div>
       <div class="text-muted text-left mb-4 tip">
         *必須為數字
@@ -315,25 +315,25 @@ export default {
 
 
     // 下載功能
-    // let downloadBtn = document.querySelector(".downloadBtn");
-    // downloadBtn.addEventListener("click", downloadFile);
-    // function downloadFile() {
-    //   //藉型別陣列建構的 blob 來建立 URL
-    //   let fileName = "fileName.csv";
-    //   const data = getRandomData();
-    //   let blob = new Blob([data], {
-    //     type: "application/octet-stream"
-    //   });
-    //   var href = URL.createObjectURL(blob);
-    //   // 從 Blob 取出資料
-    //   var link = document.createElement("a");
-    //   document.body.appendChild(link);
-    //   link.href = href;
-    //   link.download = fileName;
-    //   link.click();
-    //   console.log('blob:',blob)
-    //   console.log('href:',href)
-    // }
+    let downloadBtn = document.querySelector(".downloadBtn");
+    downloadBtn.addEventListener("click", downloadFile);
+    function downloadFile() {
+      //藉型別陣列建構的 blob 來建立 URL
+      let fileName = "fileName.csv";
+      const data = getRandomData();
+      let blob = new Blob([data], {
+        type: "application/octet-stream"
+      });
+      var href = URL.createObjectURL(blob);
+      // 從 Blob 取出資料
+      var link = document.createElement("a");
+      document.body.appendChild(link);
+      link.href = href;
+      link.download = fileName;
+      link.click();
+      // console.log('blob:',blob)
+      // console.log('href:',href)
+    }
 
 
 
@@ -354,20 +354,20 @@ export default {
     //     })
     //   }
 
-    //假資料
-    // function getRandomData() {
-    // var header = "RandomHeader";
-    // var data = "";
-    //   for (let i = 0; i < 5; i++) {
-    //     for (var j = 0; j < 2; j++) {
-    //       if (j > 0) {
-    //         data = data + ",";
-    //       }
-    //       data = data + "Item" + i + "_" + j;
-    //     }
-    //   }
-    //   return header + data;
-    // }
+    // 假資料
+    function getRandomData() {
+    var header = "RandomHeader";
+    var data = "";
+      for (let i = 0; i < 5; i++) {
+        for (var j = 0; j < 2; j++) {
+          if (j > 0) {
+            data = data + ",";
+          }
+          data = data + "Item" + i + "_" + j;
+        }
+      }
+      return header + data;
+    }
   },
   beforeUpdate: function() {
     //當資料變化時被呼叫，還不會描繪 View。
