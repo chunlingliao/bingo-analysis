@@ -21,14 +21,14 @@
       <label for="lname" class="d-inline-block">新增</label>
       <input type="text" v-model="num" class="form-control mx-sm-3 d-inline-block" placeholder="筆數">
       <label for="lname" class="d-inline-block">筆序號</label>
-      <button type="submit" class="btn btn-primary mb-2 d-inline-block ml-2 mr-5" @click="insert()">新增</button>
+      <button type="submit" class="btn add-btn mb-2 d-inline-block ml-2 mr-5" @click="insert()">新增</button>
 
       <select v-model="selected" class="form-control filterSelect d-inline-block">
           <option v-for="(option, i) in options" v-bind:value="option.value" :key="i">
             {{ option.text }}
           </option>
       </select>
-      <button type="button" class="btn btn-info float-right downloadBtn">下載</button>
+      <button type="button" class="btn download-btn float-right downloadBtn">下載</button>
     </div>
       <div class="text-muted text-left mb-4 tip">
         *必須為數字

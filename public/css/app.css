@@ -1,6 +1,6 @@
 /* 共用主色系 */
 .text-primary {
-  color: #027eff
+  color: #fca027 !important
 }
 
 /* 共用 */
@@ -8,7 +8,7 @@
   display: inline-block;
   width: 25px;
   height: 25px;
-  background-color: #ffd196;
+  background-color: #a9d4ff;
   border-radius: 50%;
   margin-right: 4px;
   margin-left: 4px;
@@ -125,7 +125,7 @@
 
 /* 第一塊 */
 .header {
-  background-color: #027eff;
+  background-color: #fca027;
   color: #ffffff;
   font-size: 18px;
   padding: 8px 0;
@@ -151,8 +151,8 @@
 }
 
 .nav-pills .nav-link.active {
-  background-color: #e1efff;
-  color: #54a0e5;
+  background-color: #fee9cd;
+  color: #fca027;
 }
 
 .nav-link {
@@ -178,7 +178,7 @@
 
 /* 期號  */
 .number-inplay {
-  background-color: #ffb14e;
+  background-color: #4ea7ff;
   color: #ffffff;
 }
 
@@ -277,7 +277,7 @@
 .history-number-total {
   font-size: 30px;
   font-weight: 500;
-  color: #027eff;
+  color: #fca027;
 }
 
 .table thead th {
@@ -314,14 +314,14 @@
   width: 50px;
   border-radius: 50%;
   text-align: center;
-  background: #54a0e5;
-  box-shadow: 1px 1px 4px 0 rgb(2, 46, 93);
+  background: #fca027;
+  box-shadow: 1px 1px 4px 0 rgb(216 126 6);
   line-height: 45px;
   z-index: 9
 }
 
 .toTop span:hover {
-  background: #057eff
+  background: #fb930b;
 }
 
 .toTop span::before {
@@ -438,12 +438,10 @@
   animation: fa-spin 2s infinite linear;
 }
 
-
-
 /* 後台 */
 /* 賓果後台 */
 .header {
-  background-color: #027eff;
+  background-color: #fca027;
   color: #ffffff;
   font-size: 18px;
   padding: 8px 0;
@@ -483,34 +481,22 @@ input,
   border: 2px solid #ebeef1;
 }
 
-/* gototop */
-.toTop span {
-  position: fixed;
-  bottom: 70px;
-  right: 24px;
-  opacity: .9;
-  height: 50px;
-  width: 50px;
-  border-radius: 50%;
-  text-align: center;
-  background: #54a0e5;
-  box-shadow: 1px 1px 4px 0 rgb(2, 46, 93);
-  line-height: 45px;
-  z-index: 9
+.add-btn {
+  background-color: #4ea7ff;
+  color: #ffffff;
 }
 
-.toTop span:hover {
-  background: #057eff
+.add-btn:hover {
+  background-color: #1a8dff;
+  color: #ffffff;
 }
 
-.toTop span::before {
-  content: "";
-  position: absolute;
-  left: calc(50% - 7.5px);
-  top: calc(50% - 14px);
-  width: 0;
-  height: 15px;
-  border: 7px solid transparent;
-  border-top: 10px solid #f6f6f6;
-  transform: rotate(180deg)
+.download-btn {
+  background-color: #9c9c9c;
+  color: #ffffff;
+}
+
+.download-btn:hover {
+  background-color: #838383;
+  color: #ffffff;
 }
