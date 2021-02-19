@@ -33,6 +33,8 @@ npm run test:e2e
 ### DEMO
 ```
 https://chunlingliao.github.io/bingo-analysis/
+
+登入序號：qwert16888
 ```
 
 ### 簡介
