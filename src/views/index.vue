@@ -325,6 +325,10 @@ export default {
   mounted: function() {
     //元素已掛載， $el 被建立。
     console.log(window.customElements)
+    if(!localStorage.getItem('login')) 
+      this.$router.push({
+        path: '/login'
+      })
 
     this.checkSuperUser = localStorage.getItem('login')
 
